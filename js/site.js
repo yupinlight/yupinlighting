@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  var baseMeta = document.querySelector('meta[name="site-base"]');
+  var siteBase = (baseMeta && baseMeta.getAttribute("content")) || "/";
+
   /* navigation */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
@@ -30,7 +33,7 @@
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch("/index.json").then(function (r) { return r.json(); }).catch(function () { return []; });
+      indexPromise = fetch(siteBase + "index.json").then(function (r) { return r.json(); }).catch(function () { return []; });
     }
     return indexPromise;
   }
