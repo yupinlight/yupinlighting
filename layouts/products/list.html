@@ -101,7 +101,7 @@
         {{- range $series }}
         {{- $items := .RegularPages.ByWeight -}}
         <a class="series-card" href="{{ .RelPermalink }}">
-          <div class="series-card__visual" aria-hidden="true"><span>{{ .Params.seriesName }}</span></div>
+          {{ partial "series-visual.html" . }}
           <div class="series-card__body">
             <div class="series-card__top"><h3>{{ .Params.seriesName }}</h3><span class="series-count">{{ len $items }} models</span></div>
             <p>{{ .Description }}</p>

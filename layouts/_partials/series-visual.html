@@ -1,0 +1,12 @@
+{{- $key := .Params.seriesKey -}}
+{{- $files := dict
+  "pendant" "series-pendant.jpg"
+  "ceiling" "series-ceiling.jpg"
+  "outdoor" "series-outdoor.jpg"
+  "wall" "series-wall.jpg"
+-}}
+{{- $file := index $files $key | default "hero-interior.jpg" -}}
+<div class="series-card__visual">
+  <img src="{{ (printf "images/%s" $file) | relURL }}" alt="{{ .Params.seriesName }} by Imperial Lighting" loading="lazy" width="1200" height="900">
+  <span class="series-card__name">{{ .Params.seriesName }}</span>
+</div>

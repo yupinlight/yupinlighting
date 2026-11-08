@@ -4,21 +4,27 @@
 {{- $count := len $all -}}
 
 <section class="hero">
-  <div class="hero-lines" aria-hidden="true"></div>
-  <div class="shell hero-inner">
-    <p class="eyebrow">Jiangmen, China · Est. {{ site.Params.founded }}</p>
-    <h1>LED Lighting Manufacturer in Jiangmen, China — Since {{ site.Params.founded }}</h1>
-    <p class="hero-sub">Pendant lights, wall and vanity lights, ceiling lights and outdoor wall lamps for importers, project suppliers and private-label brands across Europe and North America.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ "/products/" | relURL }}">Browse the catalogue</a>
-      <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Request a quote</a>
+  <div class="shell">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Jiangmen, China · Est. {{ site.Params.founded }}</p>
+        <h1>LED Lighting Manufacturer in Jiangmen, China — Since {{ site.Params.founded }}</h1>
+        <p class="hero-sub">Pendant lights, wall and vanity lights, ceiling lights and outdoor wall lamps for importers, project suppliers and private-label brands across Europe and North America.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ "/products/" | relURL }}">Browse the catalogue</a>
+          <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Request a quote</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Founded</dt><dd>{{ site.Params.founded }}</dd></div>
+          <div><dt>Product series</dt><dd>04</dd></div>
+          <div><dt>Models in catalogue</dt><dd>{{ $count }}</dd></div>
+          <div><dt>Main markets</dt><dd>EU &amp; US</dd></div>
+        </dl>
+      </div>
+      <div class="hero-visual">
+        <img src="{{ "images/hero-interior.jpg" | relURL }}" alt="Sculptural brass pendant lights above a dining table in a green-walled room" width="1680" height="2240" fetchpriority="high">
+      </div>
     </div>
-    <dl class="hero-stats">
-      <div><dt>Founded</dt><dd>{{ site.Params.founded }}</dd></div>
-      <div><dt>Product series</dt><dd>04</dd></div>
-      <div><dt>Models in catalogue</dt><dd>{{ $count }}</dd></div>
-      <div><dt>Main markets</dt><dd>EU &amp; US</dd></div>
-    </dl>
   </div>
 </section>
 
@@ -75,7 +81,7 @@
       {{- range $series }}
       {{- $items := .RegularPages.ByWeight -}}
       <a class="series-card" href="{{ .RelPermalink }}">
-        <div class="series-card__visual" aria-hidden="true"><span>{{ .Params.seriesName }}</span></div>
+        {{ partial "series-visual.html" . }}
         <div class="series-card__body">
           <div class="series-card__top"><h3>{{ .Params.seriesName }}</h3><span class="series-count">{{ len $items }} models</span></div>
           <p>{{ .Description }}</p>
