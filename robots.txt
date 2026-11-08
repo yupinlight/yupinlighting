@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://yupinlight.github.io/yupinlighting/sitemap.xml
