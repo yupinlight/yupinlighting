@@ -1,4 +1,4 @@
-baseURL = "https://www.imperial-lighting.com/"
+baseURL = "https://yupinlight.github.io/yupinlighting/"
 title = "Imperial Lighting"
 theme = "PaperMod"
 defaultContentLanguage = "en"
