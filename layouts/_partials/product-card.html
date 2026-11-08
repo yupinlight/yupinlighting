@@ -1,0 +1,32 @@
+{{- $p := .page -}}
+{{- $eager := .eager | default false -}}
+{{- $watt := int (replaceRE "[^0-9].*$" "" $p.Params.wattage) -}}
+<a class="p-card" href="{{ $p.RelPermalink }}"
+   data-watt="{{ $watt }}"
+   data-cct="{{ $p.Params.cct }}"
+   data-colour="{{ delimit $p.Params.colour " | " }}"
+   data-diffuser="{{ $p.Params.diffuser }}"
+   data-lumen="{{ $p.Params.delivered_lumen }}">
+  <div class="p-card__media">
+    {{- with $p.Params.images }}
+      {{- with .main }}
+      <img src="{{ . }}" alt="{{ $p.Params.model }} {{ $p.Title }} — {{ $p.Params.diffuser }} — Imperial Lighting factory" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="600" height="600">
+      {{- end }}
+    {{- else }}
+    <div class="p-placeholder">
+      <span class="p-placeholder__series">{{ $p.Params.seriesName }}</span>
+      <span class="p-placeholder__model">{{ $p.Params.model }}</span>
+      <span class="p-placeholder__note">Photography available on request</span>
+    </div>
+    {{- end }}
+  </div>
+  <div class="p-card__body">
+    <div class="p-card__top">
+      <span class="p-model">{{ $p.Params.model }}</span>
+      <span class="p-series">{{ $p.Params.seriesName }}</span>
+    </div>
+    <h3>{{ $p.Title }}</h3>
+    <p class="p-meta">{{ $p.Params.wattage }} · {{ $p.Params.cct }} · CRI {{ $p.Params.cri }}</p>
+    <span class="p-link">View details<span aria-hidden="true"> →</span></span>
+  </div>
+</a>

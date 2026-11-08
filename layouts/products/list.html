@@ -1,0 +1,123 @@
+{{ define "main" }}
+{{- $isSeries := .Params.seriesKey -}}
+{{- if $isSeries -}}
+  {{- $items := .RegularPages.ByWeight -}}
+  {{- $crumbs := slice
+    (dict "name" "Home" "url" ("/" | relURL))
+    (dict "name" "Products" "url" ("/products/" | relURL))
+    (dict "name" (.Params.seriesName | default .Title) "url" .RelPermalink) -}}
+  <section class="page-hero">
+    <div class="shell">
+      {{ partial "breadcrumbs.html" $crumbs }}
+      <p class="eyebrow">{{ .Params.seriesName }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="page-hero__lede">{{ .Description }}</p>
+      <p class="page-hero__count">{{ len $items }} models in this series</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <div class="prose intro-prose">{{ .Content }}</div>
+      {{- $colours := slice -}}
+      {{- $diffusers := slice -}}
+      {{- $ccts := slice -}}
+      {{- range $items -}}
+        {{- range .Params.colour }}{{ $colours = $colours | append . }}{{ end -}}
+        {{- $diffusers = $diffusers | append .Params.diffuser -}}
+        {{- $ccts = $ccts | append .Params.cct -}}
+      {{- end -}}
+      <form class="filter-bar" data-filter aria-label="Filter models">
+        <div class="filter-grid">
+          <label class="filter-field">
+            <span>Wattage</span>
+            <select data-filter-watt>
+              <option value="">All wattages</option>
+              <option value="1-10">10W and below</option>
+              <option value="11-30">11–30W</option>
+              <option value="31+">31W and above</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Colour temperature</span>
+            <select data-filter-cct>
+              <option value="">All CCT</option>
+              {{- range uniq $ccts }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Finish</span>
+            <select data-filter-colour>
+              <option value="">All finishes</option>
+              {{- range uniq $colours }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Diffuser</span>
+            <select data-filter-diffuser>
+              <option value="">All diffusers</option>
+              {{- range uniq $diffusers }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Delivered lumen</span>
+            <select data-filter-lumen>
+              <option value="">Any output</option>
+              <option value="0-500">Under 500 lm</option>
+              <option value="500-2000">500–2000 lm</option>
+              <option value="2000+">Over 2000 lm</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-foot">
+          <p class="filter-count">Showing <strong data-filter-count>{{ len $items }}</strong> of {{ len $items }} models</p>
+          <button type="reset" class="filter-reset">Reset filters</button>
+        </div>
+      </form>
+      <p class="filter-empty" data-filter-empty hidden>No models match these filters. <a href="{{ "/contact/" | relURL }}">Ask us about a custom specification</a>.</p>
+      <div class="product-grid product-grid--series">
+        {{- range $items }}
+        {{ partial "product-card.html" (dict "page" .) }}
+        {{- end }}
+      </div>
+      <div class="inline-cta">
+        <p>Looking for a finish or diffuser that is not listed?</p>
+        <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Ask for a custom option</a>
+      </div>
+    </div>
+  </section>
+{{- else -}}
+  {{- $series := .Sections -}}
+  <section class="page-hero">
+    <div class="shell">
+      {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("/" | relURL)) (dict "name" "Products" "url" .RelPermalink)) }}
+      <p class="eyebrow">Catalogue</p>
+      <h1>Product Catalogue</h1>
+      <p class="page-hero__lede">{{ .Description }}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <div class="series-grid series-grid--wide">
+        {{- range $series }}
+        {{- $items := .RegularPages.ByWeight -}}
+        <a class="series-card" href="{{ .RelPermalink }}">
+          <div class="series-card__visual" aria-hidden="true"><span>{{ .Params.seriesName }}</span></div>
+          <div class="series-card__body">
+            <div class="series-card__top"><h3>{{ .Params.seriesName }}</h3><span class="series-count">{{ len $items }} models</span></div>
+            <p>{{ .Description }}</p>
+            <div class="series-card__models">
+              {{- range first 3 $items }}<span>{{ .Params.model }}</span>{{ end }}
+            </div>
+            <span class="p-link">View series<span aria-hidden="true"> →</span></span>
+          </div>
+        </a>
+        {{- end }}
+      </div>
+      <div class="inline-cta">
+        <p>Not sure which series fits your project? Send the room type and target market — we will point you to the right models.</p>
+        <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Request a recommendation</a>
+      </div>
+    </div>
+  </section>
+{{- end -}}
+{{ end }}

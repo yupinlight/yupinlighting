@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page-hero page-hero--404">
+  <div class="shell narrow">
+    <p class="eyebrow">404</p>
+    <h1>This page is not in the catalogue.</h1>
+    <p class="page-hero__lede">The link may be outdated. Search for a model, start from a product series, or send us your requirement directly.</p>
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="Search by model number…" autocomplete="off" aria-label="Search the catalogue">
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+    <div class="series-links">
+      {{- range (site.GetPage "/products").Sections }}
+      <a href="{{ .RelPermalink }}">{{ .Params.seriesName | default .Title }}</a>
+      {{- end }}
+    </div>
+    <a class="btn btn-primary" href="{{ "/contact/" | relURL }}">Request a quote</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,123 @@
+{{ define "main" }}
+<section class="page-hero page-hero--contact">
+  <div class="shell">
+    {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("/" | relURL)) (dict "name" "Contact" "url" .RelPermalink)) }}
+    <p class="eyebrow">Inquiry</p>
+    <h1>{{ .Title }}</h1>
+    <p class="page-hero__lede">{{ .Description }}</p>
+  </div>
+</section>
+
+<section class="section contact-section">
+  <div class="shell contact-grid">
+    <div class="contact-form-wrap">
+      <div class="prose contact-intro">{{ .Content }}</div>
+
+      <form class="rfq-form" action="https://formsubmit.co/{{ site.Params.email }}" method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="_subject" value="RFQ | imperial-lighting.com">
+        <input type="hidden" name="_next" value="{{ site.Params.successPage | absURL }}">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="Full Name" required minlength="2" maxlength="50" autocomplete="name">
+            <p class="field-error" data-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="Company Name" maxlength="100" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Business Email <span class="req">*</span></label>
+            <input type="email" id="email" name="Business Email" required autocomplete="email">
+            <p class="field-error" data-for="email"></p>
+          </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" name="WhatsApp Number" maxlength="30" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="country">Country / Target Market</label>
+            <input type="text" id="country" name="Country / Target Market" maxlength="60" autocomplete="country-name">
+          </div>
+          <div class="field">
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inquiry" name="Inquiry Type">
+              <option value="">Select one</option>
+              <option>Stock Wholesale</option>
+              <option>OEM Private Label</option>
+              <option>ODM New Mould</option>
+              <option>Project Supply</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="quantity">Estimated Quantity</label>
+            <input type="text" id="quantity" name="Estimated Quantity" placeholder="e.g. 200 pcs or to be confirmed">
+          </div>
+          <div class="field">
+            <label for="attachment">Attachment</label>
+            <input type="file" id="attachment" name="Attachment" accept=".jpg,.jpeg,.png,.pdf,.docx" multiple>
+            <p class="field-hint">Up to 3 files, 10 MB each. jpg, png, pdf or docx.</p>
+            <p class="field-error" data-for="attachment"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="Message" rows="6" required minlength="10" maxlength="2000" placeholder="Model numbers, finish, target market and any project timing."></textarea>
+          <p class="field-error" data-for="message"></p>
+        </div>
+
+        <p class="form-consent">By submitting this form you agree that Imperial Lighting may contact you about this inquiry. Your information is used only for this purpose, is not sold or shared for marketing, and can be deleted on request — see our <a href="{{ "/privacy/" | relURL }}">Privacy Policy</a>.</p>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send inquiry</button>
+          <p class="form-note">We reply within one business day. If the form fails, email <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>.</p>
+        </div>
+      </form>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="contact-block">
+        <h2>Direct contact</h2>
+        <dl>
+          <dt>Email</dt><dd><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></dd>
+          <dt>Phone</dt><dd>{{ site.Params.phone }}</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/{{ site.Params.whatsapp }}" target="_blank" rel="noopener">Start a chat</a></dd>
+        </dl>
+      </div>
+      <div class="contact-block">
+        <h2>Factory</h2>
+        <p>{{ site.Params.address }}</p>
+        <p class="muted">Visits by appointment. Let us know your travel dates and the product families you want to review.</p>
+      </div>
+      <div class="contact-block">
+        <h2>Working hours</h2>
+        <p>Monday – Saturday, 09:00 – 18:00 China Standard Time (GMT+8).</p>
+        <p class="muted">Inquiries received outside these hours are answered on the next working day.</p>
+      </div>
+      <div class="contact-block contact-block--tips">
+        <h2>What helps us quote faster</h2>
+        <ul class="tick-list">
+          <li>Model numbers or catalogue page</li>
+          <li>Target quantity per model</li>
+          <li>Finishes and diffuser preference</li>
+          <li>Destination market and certification needs</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+{{ end }}

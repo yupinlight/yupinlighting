@@ -1,0 +1,58 @@
+{{- $brand := site.Params.brand | default site.Title -}}
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" $brand
+  "url" site.BaseURL
+  "logo" (absURL "favicon.svg")
+  "foundingDate" site.Params.founded
+  "email" site.Params.email
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" "No.6 Zhongtai West Road, Hetang Town, Pengjiang District"
+    "addressLocality" "Jiangmen"
+    "addressRegion" "Guangdong"
+    "addressCountry" "CN")
+-}}
+{{- if or .IsHome (eq .Type "contact") -}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- end -}}
+{{- if eq .Type "products" -}}
+{{- with .Params.model -}}
+{{- $seriesName := $.Params.seriesName -}}
+{{- $props := slice
+  (dict "@type" "PropertyValue" "name" "Wattage" "value" $.Params.wattage)
+  (dict "@type" "PropertyValue" "name" "CCT" "value" $.Params.cct)
+  (dict "@type" "PropertyValue" "name" "CRI" "value" $.Params.cri)
+  (dict "@type" "PropertyValue" "name" "Source Lumen" "value" (printf "%v" $.Params.source_lumen))
+  (dict "@type" "PropertyValue" "name" "Delivered Lumen" "value" (printf "%v" $.Params.delivered_lumen))
+  (dict "@type" "PropertyValue" "name" "Diffuser" "value" $.Params.diffuser)
+  (dict "@type" "PropertyValue" "name" "Colour" "value" (delimit $.Params.colour " / "))
+-}}
+{{- $product := dict
+  "@context" "https://schema.org"
+  "@type" "Product"
+  "name" (printf "%s %s" . $.Title)
+  "sku" .
+  "mpn" .
+  "description" $.Params.summary
+  "image" (absURL "images/og-default.png")
+  "brand" (dict "@type" "Brand" "name" site.Params.brand)
+  "manufacturer" (dict "@type" "Organization" "name" site.Params.brand "url" site.BaseURL)
+  "additionalProperty" $props
+-}}
+<script type="application/ld+json">{{ $product | jsonify | safeJS }}</script>
+{{- $crumbs := slice
+  (dict "name" "Home" "url" site.BaseURL)
+  (dict "name" "Products" "url" (absURL "products/"))
+  (dict "name" $seriesName "url" $.CurrentSection.Permalink)
+  (dict "name" $.Params.model "url" $.Permalink)
+-}}
+{{- $items := slice -}}
+{{- range $i, $c := $crumbs -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" $c.name "item" $c.url) -}}
+{{- end -}}
+{{- $bc := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items -}}
+<script type="application/ld+json">{{ $bc | jsonify | safeJS }}</script>
+{{- end -}}
+{{- end -}}

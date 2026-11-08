@@ -1,0 +1,69 @@
+baseURL = "https://www.imperial-lighting.com/"
+title = "Imperial Lighting"
+theme = "PaperMod"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+timeZone = "Asia/Shanghai"
+enableEmoji = false
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 24
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-US"
+    weight = 1
+    title = "Imperial Lighting"
+
+[params]
+  description = "LED lighting manufacturer in Jiangmen, China. Pendant lights, wall sconces, ceiling lights and outdoor wall lamps. OEM & ODM."
+  defaultTheme = "light"
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  brand = "Imperial Lighting"
+  tagline = "LED Lighting Manufacturer in Jiangmen, China — Since 2013"
+  founded = "2013"
+  email = "yupin_sales@126.com"
+  phone = "××"
+  whatsapp = "86XXXXXXXXXXX"
+  address = "No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China"
+  markets = "Europe · North America"
+  successPage = "/thanks/"
+  cloudflareAnalyticsToken = ""
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[menus]
+  [[menus.main]]
+    name = "Products"
+    pageRef = "/products"
+    weight = 1
+  [[menus.main]]
+    name = "OEM & ODM"
+    pageRef = "/oem-odm"
+    weight = 2
+  [[menus.main]]
+    name = "Factory"
+    pageRef = "/factory"
+    weight = 3
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 5
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 6

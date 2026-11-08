@@ -1,0 +1,55 @@
+{{- $brand := site.Params.brand | default site.Title -}}
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ $brand }} home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="13" cy="9" r="4.2"/>
+          <path d="M13 1.5v2.2M13 14.3v2.2M5.4 9H3.2M22.8 9h-2.2M7.2 3.2l1.6 1.6M17.2 13.2l1.6 1.6M7.2 14.8l1.6-1.6M17.2 4.8l1.6-1.6"/>
+          <path d="M13 16.5v8"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Imperial</span>
+        <span class="brand-sub">Lighting · Since {{ site.Params.founded }}</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        {{- range site.Menus.main }}
+        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+        {{- if eq .Name "Products" }}
+        <li class="nav-item has-sub">
+          <a href="{{ .URL | relURL }}" class="nav-link{{ if $active }} is-active{{ end }}">Products</a>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show product series">+</button>
+          <div class="sub-menu">
+            {{- range (site.GetPage "/products").Sections }}
+            <a href="{{ .RelPermalink }}" class="sub-link">{{ .Params.seriesName | default .Title }}</a>
+            {{- end }}
+          </div>
+        </li>
+        {{- else }}
+        <li class="nav-item">
+          <a href="{{ .URL | relURL }}" class="nav-link{{ if $active }} is-active{{ end }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
+        {{- end }}
+        <li class="nav-item nav-search">
+          <a href="{{ "/search/" | relURL }}" class="nav-link nav-icon" aria-label="Search the catalogue">
+            <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M12.8 12.8L18 18"/></svg>
+          </a>
+        </li>
+        <li class="nav-item nav-lang">
+          <span class="lang-switch" role="button" tabindex="0" aria-disabled="true" title="English is the only language available in this release">EN
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 4l3 3 3-3"/></svg>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

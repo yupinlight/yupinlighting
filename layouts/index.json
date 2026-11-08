@@ -1,0 +1,26 @@
+[
+{{- $items := slice -}}
+{{- range (site.GetPage "/products").RegularPagesRecursive -}}
+  {{- $items = $items | append (dict
+    "type" "product"
+    "title" .Title
+    "model" .Params.model
+    "series" .Params.seriesName
+    "summary" .Params.summary
+    "keywords" (printf "%s %s %s %s" .Params.model .Params.seriesName .Params.diffuser (delimit .Params.colour " "))
+    "url" .RelPermalink) -}}
+{{- end -}}
+{{- range (site.GetPage "/blog").RegularPages -}}
+  {{- $items = $items | append (dict
+    "type" "article"
+    "title" .Title
+    "model" ""
+    "series" "Blog"
+    "summary" .Description
+    "keywords" .Title
+    "url" .RelPermalink) -}}
+{{- end -}}
+{{- range $i, $e := $items -}}
+{{- if $i }},{{ end }}{{ $e | jsonify }}
+{{- end -}}
+]
