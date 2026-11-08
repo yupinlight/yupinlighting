@@ -1,7 +1,7 @@
 {{- $brand := site.Params.brand | default site.Title -}}
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ $brand }} home">
+    <a class="brand" href="{{ "/" | absURL }}" aria-label="{{ $brand }} home">
       <span class="brand-mark" aria-hidden="true">
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1">
           <circle cx="13" cy="9" r="4.2"/>
@@ -25,7 +25,7 @@
         {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
         {{- if eq .Name "Products" }}
         <li class="nav-item has-sub">
-          <a href="{{ .URL | relURL }}" class="nav-link{{ if $active }} is-active{{ end }}">Products</a>
+          <a href="{{ .URL | absURL }}" class="nav-link{{ if $active }} is-active{{ end }}">Products</a>
           <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show product series">+</button>
           <div class="sub-menu">
             {{- range (site.GetPage "/products").Sections }}
@@ -35,12 +35,12 @@
         </li>
         {{- else }}
         <li class="nav-item">
-          <a href="{{ .URL | relURL }}" class="nav-link{{ if $active }} is-active{{ end }}">{{ .Name }}</a>
+          <a href="{{ .URL | absURL }}" class="nav-link{{ if $active }} is-active{{ end }}">{{ .Name }}</a>
         </li>
         {{- end }}
         {{- end }}
         <li class="nav-item nav-search">
-          <a href="{{ "/search/" | relURL }}" class="nav-link nav-icon" aria-label="Search the catalogue">
+          <a href="{{ "/search/" | absURL }}" class="nav-link nav-icon" aria-label="Search the catalogue">
             <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M12.8 12.8L18 18"/></svg>
           </a>
         </li>

@@ -19,10 +19,10 @@
     <div class="footer-col">
       <h3>Company</h3>
       <ul>
-        <li><a href="{{ "/oem-odm/" | relURL }}">OEM &amp; ODM</a></li>
-        <li><a href="{{ "/factory/" | relURL }}">Factory &amp; Quality</a></li>
-        <li><a href="{{ "/about/" | relURL }}">About Us</a></li>
-        <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+        <li><a href="{{ "/oem-odm/" | absURL }}">OEM &amp; ODM</a></li>
+        <li><a href="{{ "/factory/" | absURL }}">Factory &amp; Quality</a></li>
+        <li><a href="{{ "/about/" | absURL }}">About Us</a></li>
+        <li><a href="{{ "/blog/" | absURL }}">Blog</a></li>
       </ul>
     </div>
 
@@ -32,8 +32,8 @@
         <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
         <li><a href="tel:{{ site.Params.phone }}">Tel: {{ site.Params.phone }}</a></li>
         <li><a href="https://wa.me/{{ site.Params.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></li>
-        <li><a href="{{ "/privacy/" | relURL }}">Privacy Policy</a></li>
-        <li><a href="{{ "/terms/" | relURL }}">Terms of Use</a></li>
+        <li><a href="{{ "/privacy/" | absURL }}">Privacy Policy</a></li>
+        <li><a href="{{ "/terms/" | absURL }}">Terms of Use</a></li>
       </ul>
     </div>
   </div>

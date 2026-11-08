@@ -4,11 +4,11 @@
 {{- $seriesName := .Params.seriesName -}}
 {{- $seriesSlug := path.Base (strings.TrimSuffix "/" .CurrentSection.RelPermalink) -}}
 {{- $crumbs := slice
-  (dict "name" "Home" "url" ("/" | relURL))
-  (dict "name" "Products" "url" ("/products/" | relURL))
+  (dict "name" "Home" "url" ("/" | absURL))
+  (dict "name" "Products" "url" ("/products/" | absURL))
   (dict "name" $seriesName "url" .CurrentSection.RelPermalink)
   (dict "name" $model "url" .RelPermalink) -}}
-{{- $quoteURL := printf "/contact/?model=%s" $model | relURL -}}
+{{- $quoteURL := printf "/contact/?model=%s" $model | absURL -}}
 {{- $related := slice -}}
 {{- range .CurrentSection.RegularPages.ByWeight -}}
   {{- if ne .Params.model $model -}}{{- $related = $related | append . -}}{{- end -}}
@@ -104,20 +104,20 @@
             {{- range .Params.custom_options }}<li>{{ . | title }}</li>{{ end }}
           </ul>
           <p class="aside-text">Private label, custom packaging and diffuser changes are available. MOQ and setup costs are confirmed in the quotation.</p>
-          <a class="text-link" href="{{ "/oem-odm/" | relURL }}">OEM &amp; ODM services →</a>
+          <a class="text-link" href="{{ "/oem-odm/" | absURL }}">OEM &amp; ODM services →</a>
         </section>
 
         <section class="aside-block">
           <h2>Certification</h2>
           <p class="aside-text">Certification support is available for your target market. We supply test reports and technical files for the certificates held for this product family; we do not claim certification we do not hold.</p>
-          <a class="text-link" href="{{ "/contact/" | relURL }}">Request documents →</a>
+          <a class="text-link" href="{{ "/contact/" | absURL }}">Request documents →</a>
         </section>
 
         <section class="aside-block">
           <h2>Downloads</h2>
           <ul class="download-list">
-            <li><a href="{{ printf "/downloads/%s.pdf" $seriesSlug | relURL }}">Series catalogue — {{ $seriesName }} (PDF)</a></li>
-            <li><a href="{{ printf "/downloads/%s-spec.pdf" (lower $model) | relURL }}">Model spec sheet — {{ $model }} (PDF)</a></li>
+            <li><a href="{{ printf "downloads/%s.pdf" $seriesSlug | absURL }}">Series catalogue — {{ $seriesName }} (PDF)</a></li>
+            <li><a href="{{ printf "downloads/%s-spec.pdf" (lower $model) | absURL }}">Model spec sheet — {{ $model }} (PDF)</a></li>
           </ul>
           <p class="aside-text">Catalogue files are split by series for mobile use. Spec sheets list the parameter table for this model.</p>
         </section>
