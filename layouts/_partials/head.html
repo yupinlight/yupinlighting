@@ -16,6 +16,7 @@
 {{- $canonical := .Permalink -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="site-base" content="{{ "/" | relURL }}">
 <title>{{ $pageTitle }}</title>
 <meta name="description" content="{{ $desc }}">
 <meta name="robots" content="{{ if or .Params.noindex (eq .Type "thanks") }}noindex, nofollow{{ else }}index, follow{{ end }}">
