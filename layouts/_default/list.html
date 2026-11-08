@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="page-hero">
   <div class="shell">
-    {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("/" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
+    {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
     <p class="eyebrow">Journal</p>
     <h1>{{ .Title }}</h1>
     {{- with .Description }}<p class="page-hero__lede">{{ . }}</p>{{ end }}

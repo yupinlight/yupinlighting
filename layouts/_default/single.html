@@ -4,7 +4,7 @@
   <header class="page-hero">
     <div class="shell{{ if $isBlog }} narrow{{ end }}">
       {{- if not .IsHome }}
-      {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("/" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
+      {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
       {{- end }}
       {{- if $isBlog }}
       <p class="eyebrow">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
@@ -23,7 +23,7 @@
     <div class="post-cta">
       <h2>Need a specification or a quotation?</h2>
       <p>Send the models and target market. We reply within one business day.</p>
-      <a class="btn btn-primary" href="{{ "/contact/" | absURL }}">Request a quote</a>
+      <a class="btn btn-primary" href="{{ "contact/" | absURL }}">Request a quote</a>
     </div>
     {{- end }}
   </div>

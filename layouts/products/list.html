@@ -3,8 +3,8 @@
 {{- if $isSeries -}}
   {{- $items := .RegularPages.ByWeight -}}
   {{- $crumbs := slice
-    (dict "name" "Home" "url" ("/" | absURL))
-    (dict "name" "Products" "url" ("/products/" | absURL))
+    (dict "name" "Home" "url" ("" | absURL))
+    (dict "name" "Products" "url" ("products/" | absURL))
     (dict "name" (.Params.seriesName | default .Title) "url" .RelPermalink) -}}
   <section class="page-hero">
     <div class="shell">
@@ -73,7 +73,7 @@
           <button type="reset" class="filter-reset">Reset filters</button>
         </div>
       </form>
-      <p class="filter-empty" data-filter-empty hidden>No models match these filters. <a href="{{ "/contact/" | absURL }}">Ask us about a custom specification</a>.</p>
+      <p class="filter-empty" data-filter-empty hidden>No models match these filters. <a href="{{ "contact/" | absURL }}">Ask us about a custom specification</a>.</p>
       <div class="product-grid product-grid--series">
         {{- range $items }}
         {{ partial "product-card.html" (dict "page" .) }}
@@ -81,7 +81,7 @@
       </div>
       <div class="inline-cta">
         <p>Looking for a finish or diffuser that is not listed?</p>
-        <a class="btn btn-ghost" href="{{ "/contact/" | absURL }}">Ask for a custom option</a>
+        <a class="btn btn-ghost" href="{{ "contact/" | absURL }}">Ask for a custom option</a>
       </div>
     </div>
   </section>
@@ -89,7 +89,7 @@
   {{- $series := .Sections -}}
   <section class="page-hero">
     <div class="shell">
-      {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("/" | absURL)) (dict "name" "Products" "url" .RelPermalink)) }}
+      {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" "Products" "url" .RelPermalink)) }}
       <p class="eyebrow">Catalogue</p>
       <h1 class="h-display">Product Catalogue</h1>
       <p class="page-hero__lede">{{ .Description }}</p>
@@ -115,7 +115,7 @@
       </div>
       <div class="inline-cta">
         <p>Not sure which series fits your project? Send the room type and target market — we will point you to the right models.</p>
-        <a class="btn btn-ghost" href="{{ "/contact/" | absURL }}">Request a recommendation</a>
+        <a class="btn btn-ghost" href="{{ "contact/" | absURL }}">Request a recommendation</a>
       </div>
     </div>
   </section>
