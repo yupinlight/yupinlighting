@@ -5,7 +5,7 @@ description: "Imperial Lighting is an LED lighting manufacturer in Jiangmen, Chi
 
 Imperial Lighting is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands, mainly in Europe and North America.
 
-Our range is built around four families: pendant lights, wall and vanity lights, ceiling lights and outdoor wall lamps. Within each family the models share a common design language — slim metal bodies, considered diffusers and a finish palette of black, chrome, brushed nickel, brushed gold, aged brass and selected colours.
+Our range is built around six families: pendant lights, wall and vanity lights, ceiling lights, table lamps, floor lamps and outdoor wall lamps. Within each family the models share a common design language — slim metal bodies, considered diffusers and a finish palette of black, chrome, brushed nickel, brushed gold, aged brass and selected colours.
 
 We manufacture rather than trade. Aluminium die-casting, metal finishing, LED assembly and testing take place in our own facility, which lets us control dimensional accuracy, finish consistency and delivery schedules. For buyers who need a different housing, diffuser or packaging, we also work on ODM projects with new tooling.
 

@@ -1,4 +1,4 @@
 ---
 title: "Products"
-description: "Browse the Imperial Lighting catalogue by series: pendant lights, wall and vanity lights, ceiling lights and outdoor wall lights."
+description: "Browse the Imperial Lighting catalogue by series: pendant lights, wall and vanity lights, ceiling lights, table lamps, floor lamps and outdoor wall lights."
 ---

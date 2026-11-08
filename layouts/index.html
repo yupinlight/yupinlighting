@@ -9,14 +9,14 @@
       <div class="hero-copy">
         <p class="eyebrow">Jiangmen, China · Est. {{ site.Params.founded }}</p>
         <h1>LED Lighting Manufacturer in Jiangmen, China — Since {{ site.Params.founded }}</h1>
-        <p class="hero-sub">Pendant lights, wall and vanity lights, ceiling lights and outdoor wall lamps for importers, project suppliers and private-label brands across Europe and North America.</p>
+        <p class="hero-sub">Pendant lights, wall and vanity lights, ceiling lights, table lamps, floor lamps and outdoor wall lamps for importers, project suppliers and private-label brands across Europe and North America.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ "/products/" | relURL }}">Browse the catalogue</a>
           <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Request a quote</a>
         </div>
         <dl class="hero-stats">
           <div><dt>Founded</dt><dd>{{ site.Params.founded }}</dd></div>
-          <div><dt>Product series</dt><dd>04</dd></div>
+          <div><dt>Product series</dt><dd>{{ printf "%02d" (len $series) }}</dd></div>
           <div><dt>Models in catalogue</dt><dd>{{ $count }}</dd></div>
           <div><dt>Main markets</dt><dd>EU &amp; US</dd></div>
         </dl>
@@ -74,7 +74,7 @@
   <div class="shell">
     <header class="section-head">
       <p class="eyebrow">The catalogue</p>
-      <h2>Four product series</h2>
+      <h2>Six product series</h2>
       <p class="section-lede">Every model is listed with the parameters printed in our catalogue — wattage, CCT, CRI, source and delivered lumen, dimensions, finishes and diffuser.</p>
     </header>
     <div class="series-grid">
@@ -105,12 +105,12 @@
     <div class="product-grid">
       {{- $picked := slice -}}
       {{- range $series -}}
-        {{- range first 2 (.RegularPages.ByWeight) -}}
+        {{- range first 1 (.RegularPages.ByWeight) -}}
           {{- $picked = $picked | append . -}}
         {{- end -}}
       {{- end -}}
       {{- range $i, $p := $picked -}}
-        {{- if lt $i 8 }}{{ partial "product-card.html" (dict "page" $p "eager" (lt $i 4)) }}{{ end -}}
+        {{- if lt $i 6 }}{{ partial "product-card.html" (dict "page" $p "eager" (lt $i 4)) }}{{ end -}}
       {{- end -}}
     </div>
   </div>
