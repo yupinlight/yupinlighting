@@ -207,4 +207,20 @@
       }
     });
   }
+  /* scroll reveal */
+  var revealTargets = document.querySelectorAll(".section-head, .cap, .series-card, .p-card, .post-card, .process li, .inline-cta, .product-visual");
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+    Array.prototype.forEach.call(revealTargets, function (el) {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  }
 })();
