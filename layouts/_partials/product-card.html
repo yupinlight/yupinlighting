@@ -13,11 +13,9 @@
       <img src="{{ . }}" alt="{{ $p.Params.model }} {{ $p.Title }} — {{ $p.Params.diffuser }} — Imperial Lighting factory" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="600" height="600">
       {{- end }}
     {{- else }}
-    <div class="p-placeholder">
-      <span class="p-placeholder__series">{{ $p.Params.seriesName }}</span>
-      <span class="p-placeholder__model">{{ $p.Params.model }}</span>
-      <span class="p-placeholder__note">Photography available on request</span>
-    </div>
+    <img src="{{ partial "series-image.html" $p }}" alt="{{ $p.Params.seriesName }} scene — {{ $p.Params.model }} by Imperial Lighting" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="1200" height="900">
+    <span class="p-card__badge">{{ $p.Params.model }}</span>
+    <span class="p-card__note">Series scene · model photography on request</span>
     {{- end }}
   </div>
   <div class="p-card__body">

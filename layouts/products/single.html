@@ -23,10 +23,13 @@
 
     <div class="product-top">
       <div class="product-gallery">
-        <div class="product-visual">
-          <span class="pv-series">{{ $seriesName }}</span>
-          <span class="pv-model">{{ $model }}</span>
-          <span class="pv-note">Product photography and dimension drawing are issued by the factory</span>
+        <div class="product-visual product-visual--photo">
+          <img src="{{ partial "series-image.html" . }}" alt="{{ $seriesName }} scene representing model {{ $model }} by Imperial Lighting" width="1200" height="900" fetchpriority="high">
+          <div class="product-visual__caption">
+            <span class="pv-series">{{ $seriesName }}</span>
+            <span class="pv-model">{{ $model }}</span>
+            <span class="pv-note">Series scene shown · model photography and dimension drawing are issued by the factory</span>
+          </div>
         </div>
         <div class="product-thumbs" aria-hidden="true">
           <span>Main</span><span>Scene</span><span>Drawing</span>

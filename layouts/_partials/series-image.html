@@ -1,0 +1,12 @@
+{{- /* Returns the site-relative image URL used for a product or series. */ -}}
+{{- $key := .Params.seriesKey | default .Params.series -}}
+{{- $files := dict
+  "pendant" "series-pendant.jpg"
+  "ceiling" "series-ceiling.jpg"
+  "outdoor" "series-outdoor.jpg"
+  "wall" "series-wall.jpg"
+  "table" "series-table.jpg"
+  "floor" "series-floor.jpg"
+-}}
+{{- $file := index $files $key | default "hero-interior.jpg" -}}
+{{- return (printf "images/%s" $file | absURL) -}}
