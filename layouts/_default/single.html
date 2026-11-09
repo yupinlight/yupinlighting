@@ -25,6 +25,16 @@
       <p>Send the models and target market. We reply within one business day.</p>
       <a class="btn btn-primary" href="{{ "contact/" | absURL }}">Request a quote</a>
     </div>
+    {{- else }}
+    <div class="page-cta">
+      <p class="eyebrow">Next step</p>
+      <h2>Tell us what you are <em>sourcing.</em></h2>
+      <p>Send the models, finishes or drawings. We reply within one business day with price, lead time and the documents available for your market.</p>
+      <div class="page-cta__actions">
+        <a class="btn btn-light" href="{{ "contact/" | absURL }}">Request a quote</a>
+        <a class="btn btn-ghostlight" href="{{ "products/" | absURL }}">Browse the catalogue</a>
+      </div>
+    </div>
     {{- end }}
   </div>
 </article>

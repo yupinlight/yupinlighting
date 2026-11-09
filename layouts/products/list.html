@@ -6,10 +6,21 @@
     (dict "name" "Home" "url" ("" | absURL))
     (dict "name" "Products" "url" ("products/" | absURL))
     (dict "name" (.Params.seriesName | default .Title) "url" .RelPermalink) -}}
-  <section class="page-hero">
+  {{- $heroFiles := dict
+    "pendant" "series-pendant.jpg"
+    "ceiling" "series-ceiling.jpg"
+    "outdoor" "series-outdoor.jpg"
+    "wall" "series-wall.jpg"
+    "table" "series-table.jpg"
+    "floor" "series-floor.jpg"
+  -}}
+  {{- $heroFile := index $heroFiles .Params.seriesKey | default "hero-interior.jpg" -}}
+  <section class="page-hero page-hero--media">
+    <div class="page-hero__media" aria-hidden="true"><img src="{{ (printf "images/%s" $heroFile) | absURL }}" alt="" width="1200" height="900"></div>
+    <div class="page-hero__scrim" aria-hidden="true"></div>
     <div class="shell">
       {{ partial "breadcrumbs.html" $crumbs }}
-      <p class="eyebrow">{{ .Params.seriesName }}</p>
+      <p class="eyebrow eyebrow--light">{{ .Params.seriesName }}</p>
       <h1>{{ .Title }}</h1>
       <p class="page-hero__lede">{{ .Description }}</p>
       <p class="page-hero__count">{{ len $items }} models in this series</p>
@@ -87,10 +98,12 @@
   </section>
 {{- else -}}
   {{- $series := .Sections -}}
-  <section class="page-hero">
+  <section class="page-hero page-hero--media">
+    <div class="page-hero__media" aria-hidden="true"><img src="{{ "images/hero-interior.jpg" | absURL }}" alt="" width="1680" height="2139"></div>
+    <div class="page-hero__scrim" aria-hidden="true"></div>
     <div class="shell">
       {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" "Products" "url" .RelPermalink)) }}
-      <p class="eyebrow">Catalogue</p>
+      <p class="eyebrow eyebrow--light">Catalogue</p>
       <h1 class="h-display">Product Catalogue</h1>
       <p class="page-hero__lede">{{ .Description }}</p>
     </div>

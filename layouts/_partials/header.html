@@ -21,6 +21,9 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul class="nav-list">
+        <li class="nav-item">
+          <a href="{{ "" | absURL }}" class="nav-link{{ if .IsHome }} is-active{{ end }}">Home</a>
+        </li>
         {{- range site.Menus.main }}
         {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
         {{- if eq .Name "Products" }}
@@ -28,8 +31,8 @@
           <a href="{{ .URL | absURL }}" class="nav-link{{ if $active }} is-active{{ end }}">Products</a>
           <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show product series">+</button>
           <div class="sub-menu">
-            {{- range (site.GetPage "/products").Sections }}
-            <a href="{{ .RelPermalink }}" class="sub-link">{{ .Params.seriesName | default .Title }}</a>
+            {{- range $i, $s := (site.GetPage "/products").Sections }}
+            <a href="{{ $s.RelPermalink }}" class="sub-link"><span class="sub-num">{{ printf "%02d" (add $i 1) }}</span>{{ $s.Params.seriesName | default $s.Title }}</a>
             {{- end }}
           </div>
         </li>
@@ -44,10 +47,14 @@
             <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M12.8 12.8L18 18"/></svg>
           </a>
         </li>
-        <li class="nav-item nav-lang">
-          <span class="lang-switch" role="button" tabindex="0" aria-disabled="true" title="English is the only language available in this release">EN
-            <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 4l3 3 3-3"/></svg>
-          </span>
+        <li class="nav-item nav-lang has-sub">
+          <button class="nav-link lang-btn" type="button" aria-expanded="false" aria-haspopup="true">EN
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg>
+          </button>
+          <div class="sub-menu sub-menu--lang">
+            <span class="sub-link is-current">English<span class="lang-note">current</span></span>
+            <span class="sub-link is-disabled" title="Chinese version is in preparation">中文<span class="lang-note">in preparation</span></span>
+          </div>
         </li>
       </ul>
     </nav>
