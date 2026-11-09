@@ -1,8 +1,10 @@
 {{ define "main" }}
-<section class="page-hero page-hero--contact page-hero--tint">
+<section class="page-hero page-hero--contact page-hero--media">
+  <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-contact.jpg") | absURL }}" alt="" width="2560" height="1440"></div>
+  <div class="page-hero__scrim" aria-hidden="true"></div>
   <div class="shell">
     {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" "Contact" "url" .RelPermalink)) }}
-    <p class="eyebrow">Inquiry</p>
+    <p class="eyebrow eyebrow--light">Inquiry</p>
     <h1>{{ .Title }}</h1>
     <p class="page-hero__lede">{{ .Description }}</p>
   </div>

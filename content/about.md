@@ -1,6 +1,7 @@
 ---
 title: "About Imperial Lighting"
 description: "Imperial Lighting is an LED lighting manufacturer in Jiangmen, China, producing pendant, wall, ceiling and outdoor luminaires for Europe and North America since 2013."
+heroImage: "images/hero-about.jpg"
 ---
 
 Imperial Lighting is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands, mainly in Europe and North America.

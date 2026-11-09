@@ -1,6 +1,7 @@
 ---
 title: "Factory & Quality Control"
 description: "Imperial Lighting factory in Jiangmen, China: aluminium die-casting, LED assembly, incoming inspection, ageing tests and pre-shipment checks."
+heroImage: "images/hero-factory.jpg"
 ---
 
 ## A lighting factory, not a trading office

@@ -1,15 +1,17 @@
 {{ define "main" }}
 {{- $isBlog := eq .Section "blog" -}}
 <article class="page-single{{ if $isBlog }} is-post{{ end }}">
-  <header class="page-hero">
+  <header class="page-hero page-hero--media">
+    <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-interior-off.jpg") | absURL }}" alt="" width="2560" height="1440"></div>
+    <div class="page-hero__scrim" aria-hidden="true"></div>
     <div class="shell{{ if $isBlog }} narrow{{ end }}">
       {{- if not .IsHome }}
       {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
       {{- end }}
       {{- if $isBlog }}
-      <p class="eyebrow">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+      <p class="eyebrow eyebrow--light">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
       {{- else }}
-      <p class="eyebrow">{{ .Title }}</p>
+      <p class="eyebrow eyebrow--light">{{ .Title }}</p>
       {{- end }}
       <h1>{{ .Title }}</h1>
       {{- with .Description }}<p class="page-hero__lede">{{ . }}</p>{{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "OEM & ODM Services"
 description: "Private label, custom packaging, new mould development, inspection and certification support for lighting buyers working with Imperial Lighting."
+heroImage: "images/hero-oem.jpg"
 ---
 
 ## Build the fixture your project needs
