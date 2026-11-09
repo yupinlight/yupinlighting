@@ -14,8 +14,6 @@
       {{- end }}
     {{- else }}
     <img src="{{ partial "series-image.html" $p }}" alt="{{ $p.Params.seriesName }} scene — {{ $p.Params.model }} by Imperial Lighting" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="1200" height="900">
-    <span class="p-card__badge">{{ $p.Params.model }}</span>
-    <span class="p-card__note">Series scene · model photography on request</span>
     {{- end }}
   </div>
   <div class="p-card__body">
