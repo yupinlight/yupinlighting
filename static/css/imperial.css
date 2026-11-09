@@ -582,7 +582,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 /* process */
 .process-section { background: var(--forest); color: var(--ivory); }
-.process-section .eyebrow { color: var(--brass); }
+.process-section .eyebrow { color: rgba(250,249,246,.55); }
 .process-section .section-head h2 { color: var(--ivory); }
 .process {
   list-style: none;
@@ -614,13 +614,13 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 /* CTA band */
 .cta-band { background: var(--forest-2); padding: 88px 0; color: var(--ivory); }
-.cta-band .eyebrow { color: var(--brass); }
+.cta-band .eyebrow { color: rgba(250,249,246,.55); }
 .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
 .cta-inner h2 { max-width: 660px; margin-bottom: .35em; color: var(--ivory); }
 .cta-inner p { max-width: 560px; color: rgba(250,249,246,.6); margin: 0; }
 .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .cta-band .btn-ghost { border-color: rgba(250,249,246,.35); color: var(--ivory); }
-.cta-band .btn-ghost:hover { border-color: var(--brass); color: var(--brass); }
+.cta-band .btn-ghost:hover { border-color: var(--ivory); color: var(--ivory); }
 
 /* ---------- page hero ---------- */
 .page-hero { padding: 72px 0 46px; border-bottom: 1px solid var(--line); }
