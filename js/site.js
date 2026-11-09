@@ -25,6 +25,16 @@
     });
   });
 
+  /* language menu */
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var item = btn.closest(".has-sub");
+      var open = item.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
   /* search */
   var input = document.getElementById("search-input");
   var results = document.getElementById("search-results");
