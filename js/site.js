@@ -207,6 +207,19 @@
       }
     });
   }
+  /* lights on/off toggle */
+  var lightsBtn = document.querySelector(".lights-toggle");
+  if (lightsBtn) {
+    lightsBtn.addEventListener("click", function () {
+      var hero = document.querySelector(".hero");
+      if (!hero) return;
+      var off = hero.classList.toggle("hero--off");
+      lightsBtn.setAttribute("aria-pressed", off ? "true" : "false");
+      var label = lightsBtn.querySelector(".lights-toggle__text");
+      if (label) label.textContent = off ? "Lights on" : "Lights off";
+    });
+  }
+
   /* scroll reveal */
   var revealTargets = document.querySelectorAll(".section-head, .cap, .series-card, .p-card, .post-card, .process li, .inline-cta, .product-visual");
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
