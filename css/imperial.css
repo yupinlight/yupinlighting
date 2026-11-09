@@ -241,7 +241,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 82% 22%, rgba(176,141,87,.22), transparent 55%),
+    radial-gradient(ellipse at 82% 22%, rgba(250,249,246,.08), transparent 55%),
     linear-gradient(90deg, var(--forest) 42%, rgba(18,18,17,.55) 68%, rgba(18,18,17,.2) 100%);
   pointer-events: none;
   z-index: 1;
