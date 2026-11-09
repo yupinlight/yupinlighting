@@ -1,45 +1,49 @@
 {{- $brand := site.Params.brand | default site.Title -}}
 <footer class="site-footer">
-  <div class="shell footer-grid">
-    <div class="footer-brand">
-      <span class="brand-name">Imperial Lighting</span>
-      <p class="footer-address">{{ site.Params.address }}</p>
-      <p class="footer-since">Lighting manufacturer since {{ site.Params.founded }}<br>Markets: {{ site.Params.markets }}</p>
+  <div class="shell">
+    <span class="footer-wordmark" aria-hidden="true">Imperial Lighting</span>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Imperial Lighting</span>
+        <p class="footer-address">{{ site.Params.address }}</p>
+        <p class="footer-since">Lighting manufacturer since {{ site.Params.founded }}<br>Markets: {{ site.Params.markets }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Products</h3>
+        <ul>
+          {{- range (site.GetPage "/products").Sections }}
+          <li><a href="{{ .RelPermalink }}">{{ .Params.seriesName | default .Title }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="{{ "oem-odm/" | absURL }}">OEM &amp; ODM</a></li>
+          <li><a href="{{ "factory/" | absURL }}">Factory &amp; Quality</a></li>
+          <li><a href="{{ "about/" | absURL }}">About Us</a></li>
+          <li><a href="{{ "blog/" | absURL }}">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+          <li><a href="tel:{{ site.Params.phone }}">Tel: {{ site.Params.phone }}</a></li>
+          <li><a href="https://wa.me/{{ site.Params.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></li>
+          <li><a href="{{ "privacy/" | absURL }}">Privacy Policy</a></li>
+          <li><a href="{{ "terms/" | absURL }}">Terms of Use</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h3>Products</h3>
-      <ul>
-        {{- range (site.GetPage "/products").Sections }}
-        <li><a href="{{ .RelPermalink }}">{{ .Params.seriesName | default .Title }}</a></li>
-        {{- end }}
-      </ul>
+    <div class="footer-bottom">
+      <p class="footer-keywords">Pendant lights · Wall sconces · Vanity lights · Ceiling lights · Outdoor wall lamps · OEM &amp; ODM lighting manufacturer</p>
+      <p class="footer-copy">© {{ now.Year }} {{ $brand }}. All rights reserved.</p>
     </div>
-
-    <div class="footer-col">
-      <h3>Company</h3>
-      <ul>
-        <li><a href="{{ "oem-odm/" | absURL }}">OEM &amp; ODM</a></li>
-        <li><a href="{{ "factory/" | absURL }}">Factory &amp; Quality</a></li>
-        <li><a href="{{ "about/" | absURL }}">About Us</a></li>
-        <li><a href="{{ "blog/" | absURL }}">Blog</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <ul>
-        <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
-        <li><a href="tel:{{ site.Params.phone }}">Tel: {{ site.Params.phone }}</a></li>
-        <li><a href="https://wa.me/{{ site.Params.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></li>
-        <li><a href="{{ "privacy/" | absURL }}">Privacy Policy</a></li>
-        <li><a href="{{ "terms/" | absURL }}">Terms of Use</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="shell footer-bottom">
-    <p class="footer-keywords">Pendant lights · Wall sconces · Vanity lights · Ceiling lights · Outdoor wall lamps · OEM &amp; ODM lighting manufacturer</p>
-    <p class="footer-copy">© {{ now.Year }} {{ $brand }}. All rights reserved.</p>
   </div>
 </footer>
