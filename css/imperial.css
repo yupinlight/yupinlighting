@@ -10,8 +10,8 @@
   --paper-3: #e4e0d2;
   --ink: #171511;
   --ink-2: #3a362c;
-  --muted: #665f50;
-  --muted-2: #8a8471;
+  --muted: #625b4c;
+  --muted-2: #726c5a;
   --line: #d9d4c4;
   --line-soft: #e6e2d4;
   --bronze: #7d6a4c;
@@ -54,11 +54,12 @@ h1, h2, h3, h4 {
   line-height: 1.02;
   margin: 0 0 .5em;
   letter-spacing: -.035em;
+  text-wrap: balance;
 }
 
-h1 { font-size: clamp(2.9rem, 6.6vw, 5.8rem); }
-h2 { font-size: clamp(2rem, 3.8vw, 3.4rem); }
-h3 { font-size: 1.2rem; letter-spacing: -.015em; font-weight: 400; }
+h1 { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.042em; }
+h2 { font-size: clamp(2rem, 3.7vw, 3.3rem); letter-spacing: -.032em; }
+h3 { font-size: 1.2rem; letter-spacing: -.015em; font-weight: 400; line-height: 1.24; }
 
 h1 em, h2 em, .h-display em {
   font-family: var(--font-serif);
@@ -67,9 +68,9 @@ h1 em, h2 em, .h-display em {
   letter-spacing: -.015em;
 }
 
-.h-display { font-size: clamp(2.9rem, 6.6vw, 5.8rem); }
+.h-display { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.042em; }
 
-p { margin: 0 0 1em; }
+p { margin: 0 0 1em; text-wrap: pretty; }
 ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 .shell {
@@ -140,6 +141,8 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   cursor: pointer;
   transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
 }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 .btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .btn-primary:hover { background: var(--bronze); border-color: var(--bronze); color: var(--paper); }
 .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
@@ -456,7 +459,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
    MANIFESTO — big serif statement
    ============================================================ */
 .manifesto {
-  padding: 96px 0 88px;
+  padding: clamp(64px, 7vw, 104px) 0 clamp(56px, 6vw, 92px);
   border-bottom: 1px solid var(--line);
 }
 .manifesto-inner { max-width: 1080px; }
@@ -483,8 +486,8 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 /* ============================================================
    SECTIONS — numbered, hairline-led
    ============================================================ */
-.section { padding: 96px 0; }
-.section--tight { padding: 72px 0; }
+.section { padding: clamp(64px, 7.5vw, 108px) 0; }
+.section--tight { padding: clamp(48px, 5.2vw, 76px) 0; }
 
 .section-head {
   display: grid;
@@ -551,7 +554,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .series-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 36px 28px;
+  gap: clamp(28px, 3vw, 40px) clamp(16px, 1.8vw, 28px);
 }
 .series-grid--wide { grid-template-columns: repeat(2, minmax(0,1fr)); }
 .series-card { display: block; }
@@ -559,7 +562,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: var(--paper-3);
+  background: var(--coal);
 }
 .series-card__visual img {
   width: 100%;
@@ -567,7 +570,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   object-fit: cover;
   transition: transform 1.2s var(--ease);
 }
-.series-card:hover .series-card__visual img { transform: scale(1.045); }
+.series-card:hover .series-card__visual img { transform: scale(1.035); }
 .series-card__visual::after {
   content: "";
   position: absolute;
@@ -630,7 +633,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 48px 28px;
+  gap: clamp(36px, 4vw, 52px) clamp(16px, 1.8vw, 28px);
 }
 .product-grid--series { grid-template-columns: repeat(3, minmax(0,1fr)); }
 
@@ -640,6 +643,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   overflow: hidden;
   aspect-ratio: 1 / 1;
   background: var(--white);
+  border: 1px solid var(--line-soft);
 }
 .p-card__media img {
   width: 100%;
@@ -1615,7 +1619,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   transition: transform 1.4s var(--ease);
   will-change: transform;
 }
-.page-hero--media:hover .page-hero__media img { transform: scale(1.05); }
+.page-hero--media:hover .page-hero__media img { transform: scale(1.03); }
 
 .page-hero__scrim {
   position: absolute;
@@ -1712,4 +1716,45 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   .page-hero__actions { margin-top: 26px; }
   .page-cta { padding: 52px 32px; margin: 64px 0 72px; }
   .post-cta { padding: 36px 28px; }
+}
+
+/* ============================================================
+   FINISH PASS — optical rhythm, states, motion safeguards
+   ============================================================ */
+
+/* in-page anchors clear the sticky header */
+:target { scroll-margin-top: 104px; }
+
+/* a focus ring that survives on paper and on coal */
+:focus-visible { outline-width: 2px; outline-color: currentColor; }
+
+/* prose: quieter rule, colour-based hover instead of fading the text */
+.prose a { border-bottom-color: rgba(23,21,17,.28); }
+.prose a:hover { opacity: 1; color: var(--bronze); border-bottom-color: var(--bronze); }
+.prose figure { margin: 2.4em 0; }
+.prose figcaption { font-size: 12px; letter-spacing: .04em; color: var(--muted); margin-top: 12px; }
+.prose > p:first-of-type { font-size: 1.06rem; color: var(--ink-2); }
+
+/* arrow micro-motion on text links */
+.text-link svg { transition: transform .3s var(--ease); }
+.text-link:hover svg { transform: translateX(4px); }
+
+/* numerals line up in ledgers and spec tables */
+.cap-num, .series-count, .footer-since, .spec-table td, .hero-stats dd { font-variant-numeric: tabular-nums; }
+
+/* images keep their intrinsic ratio when dropped into prose */
+.prose img { max-width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .btn:hover,
+  .p-card:hover .p-card__media img,
+  .series-card:hover .series-card__visual img,
+  .text-link:hover svg { transform: none; }
 }
