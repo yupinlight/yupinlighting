@@ -412,7 +412,10 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 /* lights on/off toggle */
 .lights-toggle {
-  flex: 0 0 auto;
+  position: absolute;
+  top: 28px;
+  right: max(40px, calc((100vw - var(--shell)) / 2 + 40px));
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1506,7 +1509,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   .hero-stats div { padding: 20px 20px 24px 0; }
   .hero-stats div + div { padding-left: 20px; }
   .hero-stats div:nth-child(2n) { border-right: 0; }
-  .lights-toggle { margin-left: auto; }
+  .lights-toggle { top: 18px; right: 28px; }
 
   .manifesto { padding: 88px 0; }
   .series-grid, .series-grid--wide { grid-template-columns: 1fr; gap: 44px; }
@@ -1526,6 +1529,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 @media (max-width: 560px) {
   .shell { padding: 0 20px; }
+  .lights-toggle { top: 14px; right: 20px; }
   .product-grid, .product-grid--series { grid-template-columns: 1fr; gap: 40px; }
   .cap-grid { grid-template-columns: 1fr; }
   .cap { border-right: 0 !important; }
