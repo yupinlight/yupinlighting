@@ -1617,6 +1617,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   background:
     radial-gradient(120% 100% at 76% 50%, #262218 0%, #1a1811 45%, #14130f 78%);
 }
+.page-hero--plate > .shell { padding-right: clamp(260px, 28vw, 480px); }
 .page-hero--plate .page-hero__media {
   display: flex;
   align-items: center;
@@ -1638,6 +1639,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   background: linear-gradient(90deg, rgba(16,15,11,.9) 0%, rgba(16,15,11,.6) 46%, rgba(16,15,11,0) 76%);
 }
 @media (max-width: 900px) {
+  .page-hero--plate > .shell { padding-right: 0; }
   .page-hero--plate .page-hero__media { padding: 0; }
   .page-hero--plate .page-hero__media img {
     position: absolute;
