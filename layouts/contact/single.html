@@ -1,6 +1,6 @@
 {{ define "main" }}
-<section class="page-hero page-hero--contact page-hero--media">
-  <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-contact.jpg") | absURL }}" alt="" width="2560" height="1440"></div>
+<section class="page-hero page-hero--contact page-hero--media page-hero--plate">
+  <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-contact.jpg") | absURL }}" alt="" width="900" height="1160"></div>
   <div class="page-hero__scrim" aria-hidden="true"></div>
   <div class="shell">
     {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" "Contact" "url" .RelPermalink)) }}
