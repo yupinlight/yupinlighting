@@ -1611,6 +1611,47 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   will-change: transform;
 }
 .page-hero--media:hover .page-hero__media img { transform: scale(1.05); }
+
+/* product-plate hero: the fixture is a fixed panel, so it never crops on wide screens */
+.page-hero--plate {
+  background:
+    radial-gradient(120% 100% at 76% 50%, #262218 0%, #1a1811 45%, #14130f 78%);
+}
+.page-hero--plate .page-hero__media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 clamp(20px, 5vw, 104px);
+}
+.page-hero--plate .page-hero__media img {
+  width: clamp(210px, 23vw, 400px);
+  height: auto;
+  max-height: 80%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(214,196,164,.22);
+  box-shadow: 0 34px 90px rgba(0,0,0,.65);
+  transform: none;
+}
+.page-hero--plate:hover .page-hero__media img { transform: scale(1.03); }
+.page-hero--plate .page-hero__scrim {
+  background: linear-gradient(90deg, rgba(16,15,11,.9) 0%, rgba(16,15,11,.6) 46%, rgba(16,15,11,0) 76%);
+}
+@media (max-width: 900px) {
+  .page-hero--plate .page-hero__media { padding: 0; }
+  .page-hero--plate .page-hero__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border: 0;
+    box-shadow: none;
+    opacity: .5;
+    transform: none;
+  }
+  .page-hero--plate:hover .page-hero__media img { transform: none; }
+}
 .page-hero__scrim {
   position: absolute;
   inset: 0;
