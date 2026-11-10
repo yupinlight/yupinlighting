@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{- $isBlog := eq .Section "blog" -}}
 <article class="page-single{{ if $isBlog }} is-post{{ end }}">
-  <header class="page-hero page-hero--media page-hero--plate">
-    <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-interior-off.jpg") | absURL }}" alt="" width="900" height="1160"></div>
+  <header class="page-hero page-hero--media">
+    <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-interior-off.jpg") | absURL }}" alt="" width="2560" height="1440"></div>
     <div class="page-hero__scrim" aria-hidden="true"></div>
     <div class="shell{{ if $isBlog }} narrow{{ end }}">
       {{- if not .IsHome }}
