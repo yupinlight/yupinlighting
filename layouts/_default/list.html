@@ -6,7 +6,10 @@
     {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" .Title "url" .RelPermalink)) }}
     <p class="eyebrow eyebrow--light">Journal</p>
     <h1>{{ .Title }}</h1>
-    {{- with .Description }}<p class="page-hero__lede">{{ . }}</p>{{ end }}
+    {{- with (or .Params.heroLede .Description) }}<p class="page-hero__lede">{{ . }}</p>{{ end }}
+    {{- with .Params.heroPoints }}
+    <ul class="page-hero__points">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    {{- end }}
   </div>
 </section>
 <section class="section section--tint">

@@ -14,7 +14,16 @@
       <p class="eyebrow eyebrow--light">{{ .Title }}</p>
       {{- end }}
       <h1>{{ .Title }}</h1>
-      {{- with .Description }}<p class="page-hero__lede">{{ . }}</p>{{ end }}
+      {{- with (or .Params.heroLede .Description) }}<p class="page-hero__lede">{{ . }}</p>{{ end }}
+      {{- with .Params.heroPoints }}
+      <ul class="page-hero__points">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      {{- end }}
+      {{- if not $isBlog }}
+      <div class="page-hero__actions">
+        <a class="btn btn-light" href="{{ "products/" | absURL }}">Browse the catalogue</a>
+        <a class="btn btn-ghostlight" href="{{ "contact/" | absURL }}">Request a quote</a>
+      </div>
+      {{- end }}
     </div>
   </header>
   <div class="shell{{ if $isBlog }} narrow{{ end }}">

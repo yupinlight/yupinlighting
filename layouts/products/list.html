@@ -105,10 +105,17 @@
       {{ partial "breadcrumbs.html" (slice (dict "name" "Home" "url" ("" | absURL)) (dict "name" "Products" "url" .RelPermalink)) }}
       <p class="eyebrow eyebrow--light">Catalogue</p>
       <h1 class="h-display">Product Catalogue</h1>
-      <p class="page-hero__lede">{{ .Description }}</p>
+      <p class="page-hero__lede">{{ or .Params.heroLede .Description }}</p>
+      {{- with .Params.heroPoints }}
+      <ul class="page-hero__points">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      {{- end }}
+      <div class="page-hero__actions">
+        <a class="btn btn-light" href="{{ "contact/" | absURL }}">Request a quote</a>
+        <a class="btn btn-ghostlight" href="#series">Jump to series</a>
+      </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section" id="series">
     <div class="shell">
       <div class="series-grid series-grid--wide">
         {{- range $series }}

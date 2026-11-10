@@ -1598,20 +1598,20 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   background: var(--coal);
   color: var(--paper);
   border-bottom: 0;
-  min-height: clamp(440px, 44vw, 620px);
+  min-height: clamp(520px, min(56.25vw, 82vh), 940px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 132px 0 88px;
+  padding: 150px 0 96px;
 }
 .page-hero__media { position: absolute; inset: 0; }
 .page-hero__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 86% 10%;
+  object-position: 50% 45%;
   transform: scale(1.001);
-  transform-origin: 86% 20%;
+  transform-origin: 50% 45%;
   transition: transform 1.4s var(--ease);
   will-change: transform;
 }
@@ -1632,6 +1632,47 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .page-hero--media .breadcrumbs a { color: rgba(246,244,238,.7); }
 .page-hero--media .breadcrumbs a:hover { color: var(--paper); }
 .page-hero--media .breadcrumbs li + li::before { color: rgba(246,244,238,.32); }
+
+.page-hero--media .page-hero__lede {
+  font-size: clamp(1.04rem, 1.05vw, 1.16rem);
+  line-height: 1.62;
+  max-width: 600px;
+  color: rgba(246,244,238,.84);
+}
+.page-hero__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.page-hero__points li {
+  position: relative;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(246,244,238,.6);
+}
+.page-hero__points li + li::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateY(-50%);
+}
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.page-hero__actions .btn { padding: 13px 22px; font-size: .82rem; }
 
 .page-hero--tint { background: var(--paper-2); }
 
@@ -1664,7 +1705,11 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .post-cta h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
 
 @media (max-width: 860px) {
-  .page-hero--media { padding: 150px 0 60px; }
+  .page-hero--media { padding: 122px 0 56px; min-height: clamp(440px, 92vw, 560px); }
+  .page-hero__media img { object-position: 58% 42%; }
+  .page-hero__points { gap: 8px 22px; margin-top: 20px; font-size: .7rem; }
+  .page-hero__points li { font-size: .68rem; }
+  .page-hero__actions { margin-top: 26px; }
   .page-cta { padding: 52px 32px; margin: 64px 0 72px; }
   .post-cta { padding: 36px 28px; }
 }
