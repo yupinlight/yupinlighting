@@ -1,9 +1,9 @@
 ---
 title: "Products"
-description: "Browse the Upriem catalogue by series: pendant lights, wall and vanity lights, ceiling lights, table lamps, floor lamps and outdoor wall lights."
-heroLede: "Six series under one design language: pendant, wall and vanity, ceiling, table, floor and outdoor wall lighting. Every model can be private-labelled, with custom housing, diffuser, finish and packaging developed in-house."
+description: "Browse the Upriem catalogue by series: ceiling lights, pendant lights, wall and vanity lights, outdoor wall lights, table lamps and floor lamps."
+heroLede: "Six series under one design language: ceiling, pendant, wall and vanity, outdoor wall, table and floor lighting. Every model can be private-labelled, with custom housing, diffuser, finish and packaging developed in-house."
 heroPoints:
-  - "Pendant · Wall · Ceiling"
-  - "Table · Floor · Outdoor"
+  - "Ceiling · Pendant · Wall & Vanity"
+  - "Outdoor Wall · Table · Floor"
   - "OEM and ODM supported"
 ---
