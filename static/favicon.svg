@@ -1,16 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="#0e1512"/>
   <g stroke-linecap="round" stroke-linejoin="round">
-    <path d="M14 17v24a18 18 0 0 0 36 0V17" fill="none" stroke="#c9a36a" stroke-width="7.5"/>
-    <path d="M32 14 L40 28 L32 46 L24 28 Z" fill="#c9a36a"/>
-    <g stroke="#c9a36a" stroke-width="2">
-      <path d="M32 14 L32 4"/>
-      <path d="M32 14 L23 6"/>
-      <path d="M32 14 L41 6"/>
-      <path d="M32 14 L15 9"/>
-      <path d="M32 14 L49 9"/>
-      <path d="M32 14 L9 14"/>
-      <path d="M32 14 L55 14"/>
+    <path d="M14 18v22a18 18 0 0 0 36 0V18" fill="none" stroke="#c9a36a" stroke-width="8"/>
+    <path d="M32 14 L39 26 L32 45 L25 26 Z" fill="#c9a36a"/>
+    <g stroke="#c9a36a" stroke-width="1.8">
+      <path d="M32 14 L32 2"/>
+      <path d="M32 14 L24 3.5"/>
+      <path d="M32 14 L40 3.5"/>
+      <path d="M32 14 L16 6"/>
+      <path d="M32 14 L48 6"/>
+      <path d="M32 14 L9 11"/>
+      <path d="M32 14 L55 11"/>
+      <path d="M32 14 L6 17"/>
+      <path d="M32 14 L58 17"/>
     </g>
   </g>
 </svg>
