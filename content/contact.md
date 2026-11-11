@@ -1,7 +1,7 @@
 ---
 title: "Contact & Request a Quote"
 type: "contact"
-description: "Send a lighting enquiry to Imperial Lighting. Include the model, quantity and target market for a faster quotation."
+description: "Send a lighting enquiry to Upriem. Include the model, quantity and target market for a faster quotation."
 noindex: false
 heroImage: "images/hero-contact.jpg"
 heroLede: "Send the model, quantity and target market and we reply with price, lead time and the certification documents available for that model. Drawings, reference photos or a competitor sample are all a workable starting point."

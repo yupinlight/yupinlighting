@@ -1,15 +1,15 @@
 ---
-title: "About Imperial Lighting"
-description: "Imperial Lighting is an LED lighting manufacturer in Jiangmen, China, producing pendant, wall, ceiling and outdoor luminaires for Europe and North America since 2013."
+title: "About Upriem"
+description: "Upriem is an LED lighting manufacturer in Jiangmen, China, producing pendant, wall, ceiling and outdoor luminaires for Europe and North America since 2013."
 heroImage: "images/hero-about.jpg"
-heroLede: "Imperial Lighting has manufactured decorative and architectural LED luminaires in Jiangmen since 2013. Die-casting, machining, finishing, assembly and testing all happen under one roof, so housing geometry and delivery dates stay under our own control."
+heroLede: "Upriem has manufactured decorative and architectural LED luminaires in Jiangmen since 2013. Die-casting, machining, finishing, assembly and testing all happen under one roof, so housing geometry and delivery dates stay under our own control."
 heroPoints:
   - "Die-casting in-house"
   - "Extrusion and tooling"
   - "Prototype to production"
 ---
 
-Imperial Lighting is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands, mainly in Europe and North America.
+Upriem is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands, mainly in Europe and North America.
 
 Our range is built around six families: pendant lights, wall and vanity lights, ceiling lights, table lamps, floor lamps and outdoor wall lamps. Within each family the models share a common design language — slim metal bodies, considered diffusers and a finish palette of black, chrome, brushed nickel, brushed gold, aged brass and selected colours.
 
@@ -29,4 +29,4 @@ Most lighting failures are mechanical long before they are electrical: a housing
 
 If you are sourcing lighting for a hotel, residential development or retail range, the fastest route is to send us the model numbers you are interested in along with your target quantity and market. We will reply with a quotation, lead time and the certification documents available for that model.
 
-[Talk to our sales team](/contact/) or write to [yupin_sales@126.com](mailto:yupin_sales@126.com).
+[Talk to our sales team](/contact/) or write to [info@upriem.com](mailto:info@upriem.com).

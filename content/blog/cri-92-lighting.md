@@ -25,4 +25,4 @@ High CRI adds cost at the LED and driver level, so it is worth targeting. Specif
 
 If a project mixes both, keep the colour temperature consistent across the two specifications, otherwise the difference in rendering becomes visible from one area to the next.
 
-All Imperial Lighting decorative models are specified at CRI 92+. Parameters for each model are listed on its product page in the [catalogue](/products/).
+All Upriem decorative models are specified at CRI 92+. Parameters for each model are listed on its product page in the [catalogue](/products/).

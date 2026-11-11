@@ -10,10 +10,10 @@
   <div class="p-card__media{{ if $p.Params.images }} p-card__media--product{{ end }}">
     {{- with $p.Params.images }}
       {{- with .main }}
-      <img src="{{ . | absURL }}" alt="{{ $p.Params.model }} {{ $p.Title }} — {{ $p.Params.diffuser }} — Imperial Lighting factory" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="600" height="600">
+      <img src="{{ . | absURL }}" alt="{{ $p.Params.model }} {{ $p.Title }} — {{ $p.Params.diffuser }} — Upriem factory" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="600" height="600">
       {{- end }}
     {{- else }}
-    <img src="{{ partial "series-image.html" $p }}" alt="{{ $p.Params.seriesName }} scene — {{ $p.Params.model }} by Imperial Lighting" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="1200" height="900">
+    <img src="{{ partial "series-image.html" $p }}" alt="{{ $p.Params.seriesName }} scene — {{ $p.Params.model }} by Upriem" loading="{{ if $eager }}eager{{ else }}lazy{{ end }}" width="1200" height="900">
     {{- end }}
   </div>
   <div class="p-card__body">

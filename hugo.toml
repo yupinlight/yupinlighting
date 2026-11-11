@@ -1,5 +1,5 @@
-baseURL = "https://yupinlight.github.io/yupinlighting/"
-title = "Imperial Lighting"
+baseURL = "https://www.upriem.com/"
+title = "Upriem"
 theme = "PaperMod"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -20,7 +20,7 @@ disableKinds = ["taxonomy", "term"]
     languageName = "English"
     languageCode = "en-US"
     weight = 1
-    title = "Imperial Lighting"
+    title = "Upriem"
 
 [params]
   description = "LED lighting manufacturer in Jiangmen, China. Pendant lights, wall sconces, ceiling lights and outdoor wall lamps. OEM & ODM."
@@ -28,10 +28,10 @@ disableKinds = ["taxonomy", "term"]
   ShowReadingTime = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = false
-  brand = "Imperial Lighting"
+  brand = "Upriem"
   tagline = "LED Lighting Manufacturer in Jiangmen, China — Since 2013"
   founded = "2013"
-  email = "yupin_sales@126.com"
+  email = "info@upriem.com"
   phone = "××"
   whatsapp = "86XXXXXXXXXXX"
   address = "No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China"

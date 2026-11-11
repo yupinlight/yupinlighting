@@ -1,7 +1,7 @@
 ---
 title: "Inquiry Received"
 type: "thanks"
-description: "Your inquiry has been received by Imperial Lighting."
+description: "Your inquiry has been received by Upriem."
 noindex: true
 sitemap_exclude: true
 ---

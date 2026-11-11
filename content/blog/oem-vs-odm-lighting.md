@@ -25,4 +25,4 @@ Ask two questions. First, does the existing catalogue already meet the specifica
 
 A middle route is common: start with an OEM model for the first season, collect feedback from your customers, then invest in a new mould for the best-selling format. This staggers the tooling cost and keeps the range moving.
 
-Imperial Lighting supplies both routes. [OEM & ODM services](/oem-odm/) lists what can be customised and which terms need to be confirmed before a quotation.
+Upriem supplies both routes. [OEM & ODM services](/oem-odm/) lists what can be customised and which terms need to be confirmed before a quotation.

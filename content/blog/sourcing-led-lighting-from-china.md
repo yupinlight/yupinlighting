@@ -29,4 +29,4 @@ Agree on an inspection standard in the purchase order: sampling plan, defects th
 
 Test reports, certificate numbers and validity dates, the approved sample specification and the final packing list should live in one folder per order. When a customer or a customs officer asks a question two years later, that folder is the answer.
 
-If you are comparing models, the [Imperial Lighting product catalogue](/products/) lists wattage, lumen and diffuser data per model. Send us the shortlist and target market and we will confirm what is available.
+If you are comparing models, the [Upriem product catalogue](/products/) lists wattage, lumen and diffuser data per model. Send us the shortlist and target market and we will confirm what is available.

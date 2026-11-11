@@ -25,11 +25,11 @@
       <div class="product-gallery">
         {{- with .Params.images.main }}
         <div class="product-visual product-visual--product">
-          <img src="{{ . | absURL }}" alt="{{ $model }} {{ $p.Title }} by Imperial Lighting" width="1100" height="1100" fetchpriority="high">
+          <img src="{{ . | absURL }}" alt="{{ $model }} {{ $p.Title }} by Upriem" width="1100" height="1100" fetchpriority="high">
         </div>
         {{- else }}
         <div class="product-visual product-visual--photo">
-          <img src="{{ partial "series-image.html" . }}" alt="{{ $seriesName }} scene representing model {{ $model }} by Imperial Lighting" width="1200" height="900" fetchpriority="high">
+          <img src="{{ partial "series-image.html" . }}" alt="{{ $seriesName }} scene representing model {{ $model }} by Upriem" width="1200" height="900" fetchpriority="high">
         </div>
         <p class="product-visual__note">{{ $seriesName }} series scene — model photography is issued on request.</p>
         {{- end }}

@@ -1,12 +1,12 @@
 ---
 title: "OEM & ODM Services"
-description: "Private label, custom packaging, new mould development, inspection and certification support for lighting buyers working with Imperial Lighting."
+description: "Private label, custom packaging, new mould development, inspection and certification support for lighting buyers working with Upriem."
 heroImage: "images/hero-oem.jpg"
 ---
 
 ## Build the fixture your project needs
 
-Imperial Lighting has produced lighting for European and North American buyers since 2013. We work as the manufacturing partner behind our customers' own brands: you define the specification, we handle tooling, production, inspection and documentation.
+Upriem has produced lighting for European and North American buyers since 2013. We work as the manufacturing partner behind our customers' own brands: you define the specification, we handle tooling, production, inspection and documentation.
 
 ### What we can customise
 

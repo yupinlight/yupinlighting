@@ -5,7 +5,7 @@ description: "The information on this website is a product introduction, not a s
 
 ## Product information
 
-This website is a product catalogue. It introduces the lighting models manufactured by Imperial Lighting and the services we offer to trade buyers. Nothing on this site constitutes a sales offer, and no order is formed through the website.
+This website is a product catalogue. It introduces the lighting models manufactured by Upriem and the services we offer to trade buyers. Nothing on this site constitutes a sales offer, and no order is formed through the website.
 
 ## Specifications and availability
 
@@ -15,11 +15,11 @@ Lumen values are stated as source lumen and delivered lumen exactly as measured 
 
 ## Certifications
 
-Certificates are listed only where they are actually held for the relevant product family. Requirements differ between the EU, North America and other markets; compliance for your market must be confirmed before ordering. Imperial Lighting does not act as your certification body or importer of record.
+Certificates are listed only where they are actually held for the relevant product family. Requirements differ between the EU, North America and other markets; compliance for your market must be confirmed before ordering. Upriem does not act as your certification body or importer of record.
 
 ## Intellectual property
 
-Product photographs, drawings, catalogue pages and text on this site belong to Imperial Lighting. You may use them for internal evaluation and for responding to your own customers, but not for resale as a standalone asset or for representing another manufacturer's product.
+Product photographs, drawings, catalogue pages and text on this site belong to Upriem. You may use them for internal evaluation and for responding to your own customers, but not for resale as a standalone asset or for representing another manufacturer's product.
 
 ## Inquiries and quotations
 
@@ -31,4 +31,4 @@ These terms are governed by the laws of the People's Republic of China. Disputes
 
 ## Contact
 
-Questions about these terms: [yupin_sales@126.com](mailto:yupin_sales@126.com).
+Questions about these terms: [info@upriem.com](mailto:info@upriem.com).

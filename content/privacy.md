@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "How Imperial Lighting collects, uses and deletes the personal data submitted through this website."
+description: "How Upriem collects, uses and deletes the personal data submitted through this website."
 ---
 
 ## Information we collect
@@ -23,7 +23,7 @@ Inquiry records are retained for ×× months from the last contact, after which 
 
 ## Your rights
 
-You may request a copy of the data we hold about you, ask us to correct it, or ask us to delete it. Write to [yupin_sales@126.com](mailto:yupin_sales@126.com) with the subject line "Data request". We will confirm and action the request within 30 days.
+You may request a copy of the data we hold about you, ask us to correct it, or ask us to delete it. Write to [info@upriem.com](mailto:info@upriem.com) with the subject line "Data request". We will confirm and action the request within 30 days.
 
 ## Cookies
 
@@ -31,4 +31,4 @@ This site does not use tracking cookies. The analytics service is cookie-free. I
 
 ## Contact
 
-Imperial Lighting, No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Email: [yupin_sales@126.com](mailto:yupin_sales@126.com).
+Upriem, No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Email: [info@upriem.com](mailto:info@upriem.com).

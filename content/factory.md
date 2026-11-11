@@ -1,6 +1,6 @@
 ---
 title: "Factory & Quality Control"
-description: "Imperial Lighting factory in Jiangmen, China: aluminium die-casting, LED assembly, incoming inspection, ageing tests and pre-shipment checks."
+description: "Upriem factory in Jiangmen, China: aluminium die-casting, LED assembly, incoming inspection, ageing tests and pre-shipment checks."
 heroImage: "images/hero-factory.jpg"
 heroLede: "One site covers the whole build: aluminium die-casting and machining, metal finishing, LED assembly, ageing tests and pre-shipment inspection. Buyers and third-party inspectors are welcome to audit the line before a purchase order."
 heroPoints:
@@ -11,7 +11,7 @@ heroPoints:
 
 ## A lighting factory, not a trading office
 
-Imperial Lighting was established in 2013 and operates from No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Our team manufactures decorative and architectural LED lighting for buyers in Europe and North America, and we welcome OEM and ODM cooperation.
+Upriem was established in 2013 and operates from No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Our team manufactures decorative and architectural LED lighting for buyers in Europe and North America, and we welcome OEM and ODM cooperation.
 
 The factory combines aluminium die-casting with LED luminaire assembly. Decorative housings, metal frames and heat sinks are produced in-house, which keeps finish quality and dimensional tolerance under our own control. Final assembly, wiring, testing and packing are carried out on the same site.
 
