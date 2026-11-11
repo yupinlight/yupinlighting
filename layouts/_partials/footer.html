@@ -1,7 +1,9 @@
 {{- $brand := site.Params.brand | default site.Title -}}
 <footer class="site-footer">
   <div class="shell">
-    <span class="footer-wordmark" aria-hidden="true">Upriem</span>
+    <span class="footer-wordmark" aria-hidden="true">
+      <img src="{{ "images/logo-full.png" | absURL }}" alt="Upriem" style="max-height:180px;width:auto;display:block">
+    </span>
 
     <div class="footer-grid">
       <div class="footer-brand">

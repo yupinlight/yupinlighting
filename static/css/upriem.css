@@ -769,18 +769,11 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   border-top: 1px solid var(--line);
 }
 .footer-wordmark {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 72px 0 56px;
   border-bottom: 1px solid rgba(246,244,238,.14);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(3rem, 8.5vw, 8rem);
-  line-height: 1;
-  letter-spacing: -.01em;
-  color: var(--paper);
-  white-space: nowrap;
-  overflow: hidden;
 }
 .footer-grid {
   display: grid;
