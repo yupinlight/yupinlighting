@@ -1506,14 +1506,21 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   .nav-search .nav-link { padding: 16px 0; }
 
   .hero { min-height: 0; }
-  .hero-inner { padding-top: 220px; padding-bottom: 44px; }
-  .hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+  .hero-inner { padding-top: 120px; padding-bottom: 44px; }
+  .hero h1 { font-size: clamp(2.4rem, 10vw, 3.6rem); }
+  .hero .eyebrow { font-size: 14px; margin-bottom: 1em; }
   .hero-foot__inner { flex-wrap: wrap; gap: 4px 24px; padding-bottom: 20px; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .hero-stats div { padding: 20px 20px 24px 0; }
   .hero-stats div + div { padding-left: 20px; }
   .hero-stats div:nth-child(2n) { border-right: 0; }
-  .lights-toggle { top: 18px; right: 28px; }
+  .lights-toggle {
+    top: 16px;
+    right: 20px;
+    padding: 10px;
+    gap: 0;
+  }
+  .lights-toggle__text { display: none; }
 
   .manifesto { padding: 88px 0; }
   .series-grid, .series-grid--wide { grid-template-columns: 1fr; gap: 44px; }
@@ -1533,7 +1540,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 
 @media (max-width: 560px) {
   .shell { padding: 0 20px; }
-  .lights-toggle { top: 14px; right: 20px; }
+  .lights-toggle { top: 14px; right: 16px; padding: 9px; }
   .product-grid, .product-grid--series { grid-template-columns: 1fr; gap: 40px; }
   .cap-grid { grid-template-columns: 1fr; }
   .cap { border-right: 0 !important; }
