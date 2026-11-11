@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://yupinlight.github.io/yupinlighting/sitemap.xml
+Sitemap: https://www.upriem.com/sitemap.xml
