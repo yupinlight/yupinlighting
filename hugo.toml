@@ -23,7 +23,7 @@ disableKinds = ["taxonomy", "term"]
     title = "Upriem"
 
 [params]
-  assetVersion = "20261112m"
+  assetVersion = "20261112n"
   description = "LED lighting manufacturer in Jiangmen, China. Pendant lights, wall sconces, ceiling lights and outdoor wall lamps. OEM & ODM."
   defaultTheme = "light"
   ShowReadingTime = true
@@ -36,6 +36,12 @@ disableKinds = ["taxonomy", "term"]
   phone = "××"
   whatsapp = "86XXXXXXXXXXX"
   address = "No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China"
+  legalNameZh = "江门市新海品灯饰有限公司"
+  legalNameEn = "Jiangmen Xinhaipin Lighting Co., Ltd."
+  uscc = "91440703MACNMEBJ3N"
+  regCapital = "RMB 500,000"
+  incorporated = "26 June 2023"
+  businessScope = "Manufacture and sale of lighting fixtures, decorative lamps and household electrical appliances"
   markets = "Europe · North America"
   successPage = "/thanks/"
   cloudflareAnalyticsToken = ""

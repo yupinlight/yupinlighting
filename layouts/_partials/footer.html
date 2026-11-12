@@ -10,6 +10,7 @@
         <span class="brand-name">Upriem</span>
         <p class="footer-address">{{ site.Params.address }}</p>
         <p class="footer-since">Lighting manufacturer since {{ site.Params.founded }}<br>Markets: {{ site.Params.markets }}</p>
+        <p class="footer-legal">{{ site.Params.legalNameZh }}<br>{{ site.Params.legalNameEn }}<br>Reg. no. {{ site.Params.uscc }}</p>
       </div>
 
       <div class="footer-col">
@@ -35,7 +36,6 @@
         <h3>Contact</h3>
         <ul>
           <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
-          <li><a href="tel:{{ site.Params.phone }}">Tel: {{ site.Params.phone }}</a></li>
           <li><a href="https://wa.me/{{ site.Params.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></li>
           <li><a href="{{ "privacy/" | absURL }}">Privacy Policy</a></li>
           <li><a href="{{ "terms/" | absURL }}">Terms of Use</a></li>
