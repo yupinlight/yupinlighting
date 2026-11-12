@@ -1,6 +1,6 @@
 ---
 title: "About Upriem"
-description: "Upriem is an LED lighting manufacturer in Jiangmen, China, producing pendant, wall, ceiling and outdoor luminaires for Europe and North America since 2013."
+description: "Upriem is an LED lighting manufacturer in Jiangmen, China, producing pendant, wall, ceiling and outdoor luminaires for hospitality, residential and retail projects worldwide since 2013."
 heroImage: "images/hero-about.jpg"
 heroLede: "Upriem has manufactured decorative and architectural LED luminaires in Jiangmen since 2013. Die-casting, machining, finishing, assembly and testing all happen under one roof, so housing geometry and delivery dates stay under our own control."
 heroPoints:
@@ -9,7 +9,7 @@ heroPoints:
   - "Prototype to production"
 ---
 
-Upriem is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands, mainly in Europe and North America.
+Upriem is a lighting manufacturer based in Jiangmen, Guangdong, China. Since 2013 we have produced decorative and architectural LED fixtures for importers, project suppliers and private-label brands worldwide.
 
 Our range is built around six families: ceiling lights, pendant lights, wall and vanity lights, table lamps, floor lamps and outdoor wall lamps. Within each family the models share a common design language — slim metal bodies, considered diffusers and a finish palette of black, chrome, brushed nickel, brushed gold, aged brass and selected colours.
 
@@ -44,7 +44,7 @@ Upriem is the export brand of Jiangmen Xinyupin Lighting Co., Ltd., the manufact
 | Date of registration | 26 June 2023 |
 | Registered address | 2F, Building 2, No. 6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China |
 | Business scope | Manufacture and sale of lighting fixtures, decorative lamps and household electrical appliances |
-| Export markets | Europe · North America |
+| Export markets | Europe · North America · Middle East · Southeast Asia · Australia<br>Project supply worldwide |
 
 If you are sourcing lighting for a hotel, residential development or retail range, the fastest route is to send us the model numbers you are interested in along with your target quantity and market. We will reply with a quotation, lead time and the certification documents available for that model.
 

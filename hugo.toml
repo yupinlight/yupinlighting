@@ -43,7 +43,7 @@ disableKinds = ["taxonomy", "term"]
   regCapital = "RMB 500,000"
   incorporated = "26 June 2023"
   businessScope = "Manufacture and sale of lighting fixtures, decorative lamps and household electrical appliances"
-  markets = "Europe · North America"
+  markets = "Europe · North America · Middle East · Southeast Asia · Australia"
   successPage = "/thanks/"
   cloudflareAnalyticsToken = ""
 

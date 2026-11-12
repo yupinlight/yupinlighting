@@ -11,7 +11,7 @@ heroPoints:
 
 ## A lighting factory, not a trading office
 
-Upriem was established in 2013 and operates from No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Our team manufactures decorative and architectural LED lighting for buyers in Europe and North America, and we welcome OEM and ODM cooperation.
+Upriem was established in 2013 and operates from No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Our team manufactures decorative and architectural LED lighting for buyers worldwide, and we welcome OEM and ODM cooperation.
 
 ![Upriem factory production line](/images/factory/factory-production.jpg)
 

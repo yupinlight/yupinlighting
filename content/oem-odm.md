@@ -6,7 +6,7 @@ heroImage: "images/hero-oem.jpg"
 
 ## Build the fixture your project needs
 
-Upriem has produced lighting for European and North American buyers since 2013. We work as the manufacturing partner behind our customers' own brands: you define the specification, we handle tooling, production, inspection and documentation.
+Upriem has produced lighting for buyers in Europe, North America, the Middle East and Asia-Pacific since 2013. We work as the manufacturing partner behind our customers' own brands: you define the specification, we handle tooling, production, inspection and documentation.
 
 ### What we can customise
 
