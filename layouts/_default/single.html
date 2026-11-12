@@ -2,7 +2,7 @@
 {{- $isBlog := eq .Section "blog" -}}
 <article class="page-single{{ if $isBlog }} is-post{{ end }}">
   <header class="page-hero page-hero--media">
-    <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-interior-off.jpg") | absURL }}?v=20261112j" alt="" width="2560" height="1440"></div>
+    <div class="page-hero__media" aria-hidden="true"><img src="{{ (.Params.heroImage | default "images/hero-interior-off.jpg") | absURL }}?v=20261112k" alt="" width="2560" height="1440"></div>
     <div class="page-hero__scrim" aria-hidden="true"></div>
     <div class="shell{{ if $isBlog }} narrow{{ end }}">
       {{- if not .IsHome }}
