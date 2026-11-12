@@ -34,7 +34,7 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.58;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -50,15 +50,15 @@ a { color: inherit; text-decoration: none; }
 /* ---------- typography ---------- */
 h1, h2, h3, h4 {
   font-family: var(--font-sans);
-  font-weight: 300;
-  line-height: 1.02;
+  font-weight: 200;
+  line-height: .98;
   margin: 0 0 .5em;
-  letter-spacing: -.035em;
+  letter-spacing: -.04em;
   text-wrap: balance;
 }
 
-h1 { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.042em; }
-h2 { font-size: clamp(2rem, 3.7vw, 3.3rem); letter-spacing: -.032em; }
+h1 { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.055em; }
+h2 { font-size: clamp(2rem, 3.7vw, 3.3rem); letter-spacing: -.04em; }
 h3 { font-size: 1.2rem; letter-spacing: -.015em; font-weight: 400; line-height: 1.24; }
 
 h1 em, h2 em, .h-display em {
@@ -68,7 +68,7 @@ h1 em, h2 em, .h-display em {
   letter-spacing: -.015em;
 }
 
-.h-display { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.042em; }
+.h-display { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.055em; }
 
 p { margin: 0 0 1em; text-wrap: pretty; }
 ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
@@ -81,18 +81,18 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 }
 .shell.narrow { max-width: 860px; }
 
-/* eyebrow — the editorial signature */
+/* eyebrow — sans all-caps, divider retained */
 .eyebrow {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 17px;
-  letter-spacing: .01em;
-  text-transform: none;
-  color: var(--muted);
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted-2);
   margin: 0 0 1.4em;
 }
 .eyebrow::after {
@@ -388,9 +388,9 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 .hero-copy { max-width: 1000px; }
 .hero h1 {
   font-size: clamp(3.2rem, 7.4vw, 6.8rem);
-  line-height: .98;
-  letter-spacing: -.045em;
-  font-weight: 300;
+  line-height: .96;
+  letter-spacing: -.055em;
+  font-weight: 200;
   color: var(--paper);
   margin-bottom: .35em;
   animation: rise 1s var(--ease) both;
@@ -400,7 +400,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   max-width: 540px;
   color: rgba(246,244,238,.82);
   font-size: 1.02rem;
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 2.2em;
   animation: rise 1s var(--ease) .14s both;
 }
@@ -876,7 +876,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   padding: 80px 0 68px;
   border-bottom: 1px solid var(--line);
 }
-.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: none; }
+.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: none; font-weight: 200; letter-spacing: -.05em; line-height: 1; }
 .page-hero__lede { color: var(--muted); font-size: 1.02rem; max-width: 960px; margin: 0; }
 .page-hero__count {
   font-family: var(--font-serif);
@@ -1074,13 +1074,14 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 .product-intro { padding-top: 8px; }
 .model-line {
   display: block;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: .42em;
-  letter-spacing: .02em;
-  color: var(--bronze);
-  margin-bottom: .35em;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: .65em;
 }
 .product-intro h1 { font-size: clamp(2.4rem, 4.4vw, 4rem); margin-bottom: .5em; }
 .product-summary { color: var(--muted); font-size: 1rem; max-width: 480px; margin-bottom: 2em; }
@@ -1135,9 +1136,10 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   color: var(--muted-2);
 }
 .variant-chip {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 15px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
   color: var(--ink);
   border-bottom: 1px solid var(--line);
   padding-bottom: 2px;
