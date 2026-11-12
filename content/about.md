@@ -37,7 +37,7 @@ Upriem is the export brand of Jiangmen Xinhaipin Lighting Co., Ltd., the manufac
 
 | Item | Detail |
 | --- | --- |
-| Registered name | Jiangmen Xinhaipin Lighting Co., Ltd. · 江门市新海品灯饰有限公司 |
+| Registered name | Jiangmen Xinhaipin Lighting Co., Ltd.<br>江门市新海品灯饰有限公司 |
 | Unified social credit code | 91440703MACNMEBJ3N |
 | Legal representative | Wang Xue |
 | Registered capital | RMB 500,000 |
