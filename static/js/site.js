@@ -261,4 +261,23 @@
       io.observe(el);
     });
   }
+
+  /* header theme switch — transparent-over-hero vs opaque-paper */
+  var heroEl = document.querySelector(".hero");
+  var siteHeader = document.querySelector(".site-header");
+  function updateHeaderTheme() {
+    var y = window.scrollY || window.pageYOffset || 0;
+    var threshold = 80;
+    if (heroEl) {
+      // scroll past the hero bottom edge = switch to opaque paper header
+      var heroRect = heroEl.getBoundingClientRect();
+      var switchY = heroEl.offsetTop + heroRect.height - 80;
+      document.body.classList.toggle("is-nav-dark", y >= switchY);
+    } else if (siteHeader) {
+      document.body.classList.toggle("is-nav-dark", y >= threshold);
+    }
+  }
+  updateHeaderTheme();
+  window.addEventListener("scroll", updateHeaderTheme, { passive: true });
+  window.addEventListener("resize", updateHeaderTheme);
 })();

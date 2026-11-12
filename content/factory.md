@@ -13,6 +13,8 @@ heroPoints:
 
 Upriem was established in 2013 and operates from No.6 Zhongtai West Road, Hetang Town, Pengjiang District, Jiangmen, Guangdong, China. Our team manufactures decorative and architectural LED lighting for buyers in Europe and North America, and we welcome OEM and ODM cooperation.
 
+![Upriem factory production line](/images/factory/factory-production.jpg)
+
 The factory combines aluminium die-casting with LED luminaire assembly. Decorative housings, metal frames and heat sinks are produced in-house, which keeps finish quality and dimensional tolerance under our own control. Final assembly, wiring, testing and packing are carried out on the same site.
 
 ### What we make
@@ -30,9 +32,13 @@ Quality is handled as a sequence of checks rather than a final verdict.
 
 **In-process inspection.** Assembled units are checked at each station for wiring, fixing torque, diffuser seating and finish defects. First-off samples from each batch are compared with the approved golden sample.
 
+![Final inspection and hold area](/images/factory/factory-inspection.jpg)
+
 **Ageing and power-on test.** Every unit is powered on before packing. Multi-head and high-wattage fixtures run through an ageing period so that driver and LED failures surface in the factory rather than on site.
 
 **Pre-shipment inspection.** Cartons are sampled against the packing list, with a visual and functional check. Inspection photographs and a report are available for each shipment.
+
+![Engineering and testing laboratory](/images/factory/factory-engineering.jpg)
 
 ### Certificates
 
