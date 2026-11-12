@@ -31,4 +31,4 @@ These terms are governed by the laws of the People's Republic of China. Disputes
 
 ## Contact
 
-Questions about these terms: [info@upriem.com](mailto:info@upriem.com).
+Questions about these terms: [sales@urpime.com](mailto:sales@urpime.com).

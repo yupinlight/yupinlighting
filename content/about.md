@@ -33,11 +33,11 @@ Most lighting failures are mechanical long before they are electrical: a housing
 
 ## Company details
 
-Upriem is the export brand of Jiangmen Xinhaipin Lighting Co., Ltd., the manufacturing entity that signs our quotations, invoices and shipping documents.
+Upriem is the export brand of Jiangmen Xinyupin Lighting Co., Ltd., the manufacturing entity that signs our quotations, invoices and shipping documents.
 
 | Item | Detail |
 | --- | --- |
-| Registered name | Jiangmen Xinhaipin Lighting Co., Ltd.<br>江门市新海品灯饰有限公司 |
+| Registered name | Jiangmen Xinyupin Lighting Co., Ltd.<br>江门市新御品灯饰有限公司 |
 | Unified social credit code | 91440703MACNMEBJ3N |
 | Legal representative | Wang Xue |
 | Registered capital | RMB 500,000 |
@@ -48,4 +48,4 @@ Upriem is the export brand of Jiangmen Xinhaipin Lighting Co., Ltd., the manufac
 
 If you are sourcing lighting for a hotel, residential development or retail range, the fastest route is to send us the model numbers you are interested in along with your target quantity and market. We will reply with a quotation, lead time and the certification documents available for that model.
 
-[Talk to our sales team](/contact/) or write to [info@upriem.com](mailto:info@upriem.com).
+[Talk to our sales team](/contact/) or write to [sales@urpime.com](mailto:sales@urpime.com).
