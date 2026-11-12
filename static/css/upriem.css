@@ -177,22 +177,18 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .brand:hover { color: var(--ink); }
 .brand-mark {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(14,21,18,.08);
-  overflow: hidden;
   flex-shrink: 0;
 }
 .brand-mark .bm-light,
 .brand-mark .bm-dark {
   position: absolute;
-  width: 34px;
-  height: auto;
+  width: auto;
+  height: 38px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -201,11 +197,6 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
 .brand-mark .bm-dark { opacity: 0; }
 
 /* 滚动过 hero 后切换深色 <-> 浅色 logo */
-body.is-nav-dark .brand-mark {
-  background: rgba(255,255,255,.06);
-  box-shadow: none;
-  border: 1px solid rgba(201,163,106,.35);
-}
 body.is-nav-dark .brand-mark .bm-light { opacity: 0; }
 body.is-nav-dark .brand-mark .bm-dark  { opacity: 1; }
 
@@ -1782,7 +1773,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 
 @media (max-width: 860px) {
   .page-hero--media { padding: 122px 0 56px; min-height: clamp(440px, 92vw, 560px); }
-  .page-hero__media img { object-position: 58% 42%; }
+  .page-hero__media img { object-position: 74% 45%; }
   .page-hero__points { gap: 8px 22px; margin-top: 20px; font-size: .7rem; }
   .page-hero__points li { font-size: .68rem; }
   .page-hero__actions { margin-top: 26px; }
