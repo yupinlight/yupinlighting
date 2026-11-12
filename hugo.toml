@@ -23,7 +23,7 @@ disableKinds = ["taxonomy", "term"]
     title = "Upriem"
 
 [params]
-  assetVersion = "20261112v"
+  assetVersion = "20261112w"
   description = "LED lighting manufacturer in Jiangmen, China. Pendant lights, wall sconces, ceiling lights and outdoor wall lamps. OEM & ODM."
   defaultTheme = "light"
   ShowReadingTime = true

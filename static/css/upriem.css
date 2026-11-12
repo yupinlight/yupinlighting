@@ -33,7 +33,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.58;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -57,7 +57,7 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-h1 { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.055em; }
+h1 { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.06em; }
 h2 { font-size: clamp(2rem, 3.7vw, 3.3rem); letter-spacing: -.04em; }
 h3 { font-size: 1.2rem; letter-spacing: -.015em; font-weight: 400; line-height: 1.24; }
 
@@ -68,7 +68,7 @@ h1 em, h2 em, .h-display em {
   letter-spacing: -.015em;
 }
 
-.h-display { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.055em; }
+.h-display { font-size: clamp(2.9rem, 6.4vw, 5.6rem); letter-spacing: -.06em; }
 
 p { margin: 0 0 1em; text-wrap: pretty; }
 ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
@@ -96,11 +96,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.15em; }
   margin: 0 0 1.4em;
 }
 .eyebrow::after {
-  content: "";
-  flex: 0 0 44px;
-  height: 1px;
-  background: var(--line);
-  transform: translateY(-4px);
+  content: none;
 }
 .eyebrow--light { color: rgba(246,244,238,.82); }
 .eyebrow--light::after { background: rgba(246,244,238,.4); }
@@ -389,7 +385,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 .hero h1 {
   font-size: clamp(3.2rem, 7.4vw, 6.8rem);
   line-height: .96;
-  letter-spacing: -.055em;
+  letter-spacing: -.06em;
   font-weight: 200;
   color: var(--paper);
   margin-bottom: .35em;
@@ -876,7 +872,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   padding: 80px 0 68px;
   border-bottom: 1px solid var(--line);
 }
-.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: none; font-weight: 200; letter-spacing: -.05em; line-height: 1; }
+.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: none; font-weight: 200; letter-spacing: -.06em; line-height: 1; }
 .page-hero__lede { color: var(--muted); font-size: 1.02rem; max-width: 960px; margin: 0; }
 .page-hero__count {
   font-family: var(--font-serif);
