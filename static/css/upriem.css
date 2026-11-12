@@ -1822,3 +1822,15 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   .series-card:hover .series-card__visual img,
   .text-link:hover svg { transform: none; }
 }
+
+/* 手机端：实景 hero 上加强压暗，保证文字可读 */
+@media (max-width: 860px) {
+  .hero-scrim {
+    background:
+      linear-gradient(to top, rgba(16,15,11,.94) 0%, rgba(16,15,11,.80) 46%, rgba(16,15,11,.55) 100%);
+  }
+  .page-hero__scrim {
+    background:
+      linear-gradient(to top, rgba(16,15,11,.90) 0%, rgba(16,15,11,.64) 55%, rgba(16,15,11,.46) 100%);
+  }
+}
