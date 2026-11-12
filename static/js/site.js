@@ -230,6 +230,21 @@
     });
   }
 
+  /* product gallery thumbs */
+  var mainImage = document.getElementById("product-main-image");
+  var thumbs = document.querySelectorAll(".product-thumb");
+  if (mainImage && thumbs.length) {
+    Array.prototype.forEach.call(thumbs, function (btn) {
+      btn.addEventListener("click", function () {
+        var src = btn.getAttribute("data-src");
+        if (!src || mainImage.getAttribute("src") === src) return;
+        mainImage.setAttribute("src", src);
+        Array.prototype.forEach.call(thumbs, function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+      });
+    });
+  }
+
   /* scroll reveal */
   var revealTargets = document.querySelectorAll(".section-head, .cap, .series-card, .p-card, .post-card, .process li, .inline-cta, .product-visual");
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

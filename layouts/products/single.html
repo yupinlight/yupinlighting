@@ -25,8 +25,20 @@
       <div class="product-gallery">
         {{- with .Params.images.main }}
         <div class="product-visual product-visual--product">
-          <img src="{{ . | absURL }}" alt="{{ $model }} {{ $p.Title }} by Upriem" width="1100" height="1100" fetchpriority="high">
+          <img id="product-main-image" src="{{ . | absURL }}" alt="{{ $model }} {{ $p.Title }} by Upriem" width="1100" height="1100" fetchpriority="high">
         </div>
+        {{- with $.Params.images.gallery }}
+        <div class="product-thumbs">
+          <button type="button" class="product-thumb is-active" data-src="{{ $.Params.images.main | absURL }}" aria-label="View image 1">
+            <img src="{{ $.Params.images.main | absURL }}" alt="" width="160" height="160" loading="lazy">
+          </button>
+          {{- range $i, $img := . }}
+          <button type="button" class="product-thumb" data-src="{{ $img | absURL }}" aria-label="View image {{ add $i 2 }}">
+            <img src="{{ $img | absURL }}" alt="" width="160" height="160" loading="lazy">
+          </button>
+          {{- end }}
+        </div>
+        {{- end }}
         {{- else }}
         <div class="product-visual product-visual--photo">
           <img src="{{ partial "series-image.html" . }}" alt="{{ $seriesName }} scene representing model {{ $model }} by Upriem" width="1200" height="900" fetchpriority="high">
@@ -88,7 +100,11 @@
             </tbody>
           </table>
         </div>
+        {{- if .Params.params_pending }}
+        <p class="spec-note spec-note--pending">Photometric data, dimensions and finish options for this model are pending factory confirmation.</p>
+        {{- else }}
         <p class="spec-note">Parameters are transcribed from the printed catalogue ({{ with .Params.catalog_page }}{{ . }}{{ else }}n/a{{ end }}). Dimensions are in inches and keep the fractional form used in the drawing.</p>
+        {{- end }}
       </section>
 
       <aside class="product-aside">
