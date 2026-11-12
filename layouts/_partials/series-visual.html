@@ -9,6 +9,6 @@
 -}}
 {{- $file := index $files $key | default "hero-interior.jpg" -}}
 <div class="series-card__visual">
-  <img src="{{ (printf "images/%s" $file) | absURL }}" alt="{{ .Params.seriesName }} by Upriem" loading="lazy" width="1200" height="900">
+  <img src="{{ (printf "images/%s" $file) | absURL }}?v=20261112h" alt="{{ .Params.seriesName }} by Upriem" loading="lazy" width="1200" height="900">
   <span class="series-card__name">{{ .Params.seriesName }}</span>
 </div>
