@@ -876,8 +876,8 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   padding: 80px 0 68px;
   border-bottom: 1px solid var(--line);
 }
-.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: 1000px; }
-.page-hero__lede { color: var(--muted); font-size: 1.02rem; max-width: 640px; margin: 0; }
+.page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); margin-bottom: .3em; max-width: none; }
+.page-hero__lede { color: var(--muted); font-size: 1.02rem; max-width: 960px; margin: 0; }
 .page-hero__count {
   font-family: var(--font-serif);
   font-style: italic;
@@ -1669,14 +1669,12 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
   min-height: clamp(520px, min(56.25vw, 82vh), 940px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
   padding: 150px 0 96px;
 }
 .page-hero--media .shell {
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 .page-hero--media .shell h1,
 .page-hero--media .shell .page-hero__lede,
@@ -1684,13 +1682,11 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 .page-hero--media .shell .eyebrow,
 .page-hero--media .shell .breadcrumbs,
 .page-hero--media .shell .page-hero__actions {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
 }
-.page-hero--media .breadcrumbs ol { justify-content: center; }
-.page-hero--media .page-hero__actions { justify-content: center; }
-.page-hero--media .page-hero__points { justify-content: center; }
+.page-hero--media .page-hero__actions { justify-content: flex-start; }
+.page-hero--media .page-hero__points { justify-content: flex-start; }
 .page-hero__media { position: absolute; inset: 0; }
 .page-hero__media img {
   width: 100%;
@@ -1722,7 +1718,7 @@ body.home.is-nav-dark .brand-mark .bm-dark  { opacity: 0; }
 .page-hero--media .page-hero__lede {
   font-size: clamp(1.04rem, 1.05vw, 1.16rem);
   line-height: 1.62;
-  max-width: 600px;
+  max-width: 960px;
   color: rgba(246,244,238,.84);
 }
 .page-hero__points {
